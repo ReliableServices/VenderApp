@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activitys.CustomDetailActivity">
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Feb 9, 04.42 PM"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/sfpro_display_semibold"
+                    android:padding="20dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/sfpro_display_semibold"
+                    android:layout_alignParentEnd="true"
+                    android:text="Delivered"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gery_inactive"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfpro_display_semibold"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                android:padding="4dp"
+                android:text="1 ITEM"/>
+
+            <RelativeLayout
+                android:id="@+id/prod_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <ImageView
+                    android:id="@+id/img_prod"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/background_lite_gray_roundshape"
+                    android:padding="7dp"/>
+                <LinearLayout
+                    android:layout_toRightOf="@+id/img_prod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/sugar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sfpro_display_semibold"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:text="SUGAR 1KG"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:padding="3dp"
+                        android:textColor="@color/blue_color"
+                        android:fontFamily="@font/sfpro_display_regular"
+                        android:text="1 piece"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:fontFamily="@font/sfpro_display_semibold"
+                            android:text="1"
+                            android:background="@drawable/btn_green_color_bkg"
+                            android:textColor="@color/white"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:fontFamily="@font/sfpro_display_semibold"
+                            android:textColor="@color/black"
+                            android:text="X \u20B950"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textColor="@color/black"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/sfpro_display_semibold"
+                    android:text=" \u20B950"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gery_inactive"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ittl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sfpro_display_regular"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Item Total"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/delfee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/sfpro_display_regular"
+                        android:text="Delivery Fee"/>
+                    <TextView
+                        android:id="@+id/itemttl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/sfpro_display_semibold"
+                        android:text="Grand Total"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:id="@+id/ittl_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/sfpro_display_regular"
+                        android:text="\u20B9 50"/>
+                    <TextView
+                        android:id="@+id/del_fee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/sfpro_display_semibold"
+                        android:text="\u20B9 0"/>
+                    <TextView
+                        android:id="@+id/grand_ttl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/sfpro_display_semibold"
+                        android:text="\u20B9 50"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gery_inactive"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CUSTOMER DETAILS"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/sfpro_display_semibold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:drawableStart="@drawable/ic_baseline_share_24"
+                    android:drawableLeft="@drawable/ic_baseline_share_24"
+                    android:drawablePadding="4dp"
+                    android:fontFamily="@font/sfpro_display_semibold"
+                    android:text="Share"
+                    android:textColor="@color/blue_color"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sfpro_display_regular"
+                        android:textSize="14sp"
+                        android:text="Name :"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/sfpro_display_regular"
+                        android:text="Mobile"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/sfpro_display_regular"
+                        android:text="Address :"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sfpro_display_regular"
+                        android:textSize="14sp"
+                        android:text="City :"
+                        android:textColor="@color/gray"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/sfpro_display_regular"
+                        android:text="Pin Code"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/sfpro_display_regular"
+                        android:text="Payment :"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/c_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sfpro_display_medium"
+                        android:text="Aman"
+                        android:textColor="@color/gray"
+                        android:textSize="14sp" />
+
+
+
+                    <TextView
+                        android:id="@+id/c_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/sfpro_display_medium"
+                        android:text="9229233311"/>
+                    <TextView
+                        android:id="@+id/c_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/sfpro_display_medium"
+                        android:text="Babylon tower,Raipur"/>
+                    <TextView
+                        android:id="@+id/c_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sfpro_display_medium"
+                        android:textSize="14sp"
+                        android:text="Raipur"
+                        android:textColor="@color/gray"/>
+                    <TextView
+                        android:id="@+id/c_pinCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/sfpro_display_medium"
+                        android:text="492001"/>
+                    <TextView
+                        android:id="@+id/c_payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/sfpro_display_medium"
+                        android:text="cash on Delivery"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gery_inactive"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:textColor="@color/blue_color"
+                android:background="@drawable/btn_bkg_rect"
+                android:layout_margin="10dp"
+                android:textSize="17sp"
+                android:fontFamily="@font/sfpro_display_semibold"
+                android:gravity="center_horizontal"
+                android:text="Share receipt"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

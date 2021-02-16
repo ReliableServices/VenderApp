@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.ProductFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/colorNavText">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Catalogue"
+            android:textSize="21sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:fontFamily="@font/sfpro_display_bold"
+            android:padding="10dp"
+            android:drawableEnd="@drawable/ic_baseline_search_24"
+            android:drawableRight="@drawable/ic_baseline_search_24"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/empty_img"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_clipboard"/>
+
+        <TextView
+            android:id="@+id/txt_emty"
+            android:layout_below="@+id/empty_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Add products to your online store"/>
+
+        <TextView
+            android:id="@+id/emty_desc"
+            android:layout_below="@+id/txt_emty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="17sp"
+            android:textColor="@color/gray"
+            android:gravity="center"
+            android:text="@string/empty_desc"/>
+        <TextView
+            android:id="@+id/add_product"
+            android:layout_below="@+id/emty_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add new product"
+            android:fontFamily="@font/sfpro_display_semibold"
+            android:textSize="17sp"
+            android:background="@drawable/btn_green_color_bkg"
+            android:textColor="@color/white"
+            android:elevation="7dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/message"
+        android:text="Now Manage your store\n from Laptop /Desktop"
+        android:padding="20dp"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sfpro_display_semibold"
+        android:gravity="center"
+        android:drawableEnd="@drawable/ic_baseline_clear_24"
+        />
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="300dp"
+           android:src="@drawable/web_pc"
+           />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        android:text="To access your store, visit:"
+        android:fontFamily="@font/sfpro_display_regular"
+        android:padding="7dp"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:paddingStart="20dp"
+        android:paddingRight="20dp"
+        android:textSize="17sp"
+        android:textColor="@color/blue_color"
+        android:fontFamily="@font/sfpro_display_bold"
+        android:background="@drawable/btn_bkg_rect"
+        android:text="iAudit.net.co."
+        android:drawableStart="@drawable/ic_web"
+        android:layout_margin="15dp"
+        android:drawablePadding="10dp"
+        />
+</LinearLayout>

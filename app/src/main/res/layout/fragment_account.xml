@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.AccountFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account"
+            android:textSize="19sp"
+            android:padding="22dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sfpro_display_semibold"
+            android:layout_centerInParent="true"
+            />
+        <TextView
+            android:id="@+id/support_aleart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Support"
+            android:background="@drawable/btn_bkg_rect"
+            android:fontFamily="@font/sfpro_display_regular"
+            android:textSize="16sp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_margin="7dp"
+            android:drawableEnd="@drawable/ic_settings"
+            android:gravity="center_vertical"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:textColor="@color/gray"
+            android:drawablePadding="3dp"/>
+    </RelativeLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:padding="10dp">
+       <ImageView
+           android:layout_width="120dp"
+           android:layout_height="120dp"
+           android:background="@drawable/background_lite_gray_roundshape"
+           android:src="@drawable/ic_baseline_person_outline_24"/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:padding="24dp">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="21sp"
+               android:textColor="@color/black"
+               android:fontFamily="@font/sfpro_display_semibold"
+               android:text="Cloth Mix"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="17sp"
+               android:textColor="@color/blue_color"
+               android:padding="7dp"
+               android:fontFamily="@font/sfpro_display_regular"
+               android:text="Edit business details"/>
+       </LinearLayout>
+   </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="10dp"
+        android:background="@color/gery_inactive"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:text="Share IAudit App"
+                android:drawableStart="@drawable/ic_baseline_share_24"
+                android:drawablePadding="20dp"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:fontFamily="@font/sfpro_display_regular"
+                android:padding="15dp"
+                android:drawableLeft="@drawable/ic_social_media"
+                android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+            <TextView
+                android:id="@+id/iaudit_pc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:text="iAudit for PC"
+                android:drawableStart="@drawable/ic_laptop"
+                android:drawablePadding="20dp"
+                android:fontFamily="@font/sfpro_display_regular"
+                android:padding="15dp"
+                android:drawableLeft="@drawable/ic_social_media"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    android:text="Lock Screen Notifications"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawablePadding="20dp"
+                    android:fontFamily="@font/sfpro_display_regular"
+                    android:padding="15dp"
+                    android:drawableLeft="@drawable/ic_lock"
+                    />
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="20dp"
+                    tools:ignore="UseSwitchCompatOrMaterialXml"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:text="How to use iAudit App"
+                android:drawableStart="@drawable/ic_youtube"
+                android:drawablePadding="20dp"
+                android:fontFamily="@font/sfpro_display_regular"
+                android:padding="15dp"
+                android:drawableLeft="@drawable/ic_youtube"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:text="Privacy Policy"
+                android:drawableStart="@drawable/ic_padlock"
+                android:drawablePadding="20dp"
+                android:fontFamily="@font/sfpro_display_regular"
+                android:padding="15dp"
+                android:drawableLeft="@drawable/ic_padlock"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:text="Rate Us"
+                android:drawableStart="@drawable/ic_star"
+                android:drawablePadding="20dp"
+                android:fontFamily="@font/sfpro_display_regular"
+                android:padding="15dp"
+                android:drawableLeft="@drawable/ic_social_media"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:text="Sign Out"
+                android:drawableStart="@drawable/ic_baseline_login_24"
+                android:drawablePadding="20dp"
+                android:fontFamily="@font/sfpro_display_regular"
+                android:padding="15dp"
+                android:drawableLeft="@drawable/ic_social_media"
+                />
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_i_audit"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

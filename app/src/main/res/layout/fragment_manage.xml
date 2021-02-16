@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.ManageFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manage Store"
+            android:textSize="19sp"
+            android:padding="22dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sfpro_display_semibold"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+      <TextView
+          android:id="@+id/marketing_design"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="@color/black"
+          android:textSize="19sp"
+          android:text="Marketing Design"
+          android:drawablePadding="20dp"
+          android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+          android:fontFamily="@font/sfpro_display_regular"
+          android:padding="15dp"
+          android:drawableLeft="@drawable/ic_social_media"
+          android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+          app:drawableStartCompat="@drawable/ic_social_media" />
+      <TextView
+          android:id="@+id/discount_coupan"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="@color/black"
+          android:textSize="19sp"
+          android:text="Discount Coupans"
+          android:drawablePadding="20dp"
+          android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+          android:fontFamily="@font/sfpro_display_regular"
+          android:padding="15dp"
+          android:drawableLeft="@drawable/ic_social_media"
+          android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+          app:drawableStartCompat="@drawable/ic_discount" />
+      <TextView
+          android:id="@+id/my_customers"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="@color/black"
+          android:textSize="19sp"
+          android:text="My Customers"
+          android:drawableStart="@drawable/ic_baseline_person_outline_24"
+          android:drawablePadding="20dp"
+          android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+          android:fontFamily="@font/sfpro_display_regular"
+          android:padding="15dp"
+          android:drawableLeft="@drawable/ic_social_media"
+          android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24" />
+      <TextView
+          android:id="@+id/store_qr_code"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="@color/black"
+          android:textSize="19sp"
+          android:text="Store QR Code"
+          android:drawableStart="@drawable/ic_barcode"
+          android:drawablePadding="20dp"
+          android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+          android:fontFamily="@font/sfpro_display_regular"
+          android:padding="15dp"
+          android:drawableLeft="@drawable/ic_social_media"
+          android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24" />
+      <TextView
+          android:id="@+id/extra_charges"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="@color/black"
+          android:textSize="19sp"
+          android:text="Extra Charges"
+          android:drawableStart="@drawable/ic_rupee"
+          android:drawablePadding="20dp"
+          android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+          android:fontFamily="@font/sfpro_display_regular"
+          android:padding="15dp"
+          android:drawableLeft="@drawable/ic_social_media"
+          android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <TextView
+              android:id="@+id/wtsp_chat_support"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@color/black"
+              android:textSize="19sp"
+              android:text="WhatsApp Chat Support"
+              android:drawableStart="@drawable/ic_customer_service"
+              android:drawablePadding="20dp"
+              android:fontFamily="@font/sfpro_display_regular"
+              android:padding="15dp"
+              android:drawableLeft="@drawable/ic_lock"
+              />
+          <Switch
+              android:id="@+id/switch1"
+              android:layout_width="60dp"
+              android:layout_height="wrap_content"
+              android:layout_alignParentEnd="true"
+              android:layout_margin="20dp"
+              tools:ignore="UseSwitchCompatOrMaterialXml"
+              android:layout_alignParentRight="true" />
+
+      </RelativeLayout>
+
+  </LinearLayout>
+</LinearLayout>

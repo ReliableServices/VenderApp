@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_bkg_rect"
+    android:layout_margin="10dp">
+
+   <TextView
+       android:id="@+id/choose_support"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Choose support type"
+       android:textColor="@color/black"
+       android:textSize="19sp"
+       android:padding="15dp"
+       android:textAlignment="center"
+       android:fontFamily="@font/sfpro_display_medium"
+       android:drawableEnd="@drawable/ic_baseline_clear_24"/>
+
+    <LinearLayout
+        android:layout_below="@+id/choose_support"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/live_chat"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Live Chat"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sfpro_display_regular"
+            android:textAlignment="center"
+            android:drawableTop="@drawable/ic_baseline_message_24"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gery_inactive"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/call"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Phone Call"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sfpro_display_regular"
+            android:textAlignment="center"
+            android:drawableTop="@drawable/ic_baseline_phone_24"/>
+    </LinearLayout>
+
+</RelativeLayout>
