@@ -17,7 +17,8 @@
             android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:elevation="7dp"
+            android:elevation="11dp"
+            android:background="@drawable/btn_bkg_rect"
             app:cardCornerRadius="7dp">
 
             <LinearLayout
@@ -101,7 +102,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:elevation="7dp"
+            android:elevation="11dp"
+            android:background="@drawable/btn_bkg_rect"
             app:cardCornerRadius="7dp">
             <LinearLayout
                 android:layout_width="match_parent"

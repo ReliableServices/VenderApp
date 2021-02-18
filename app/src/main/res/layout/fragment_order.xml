@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,9 +8,10 @@
     tools:context=".fragments.OrderFragment">
 
     <RelativeLayout
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/gray"
+        android:background="@color/colorNavText"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -26,29 +27,30 @@
     </RelativeLayout>
 
     <HorizontalScrollView
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/hztl_scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="none">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:orientation="horizontal"
-            android:padding="15dp">
+            android:padding="7dp">
             <TextView
                 android:id="@+id/alltime"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/background_lite_gray_roundshape"
                 android:fontFamily="@font/sfpro_display_semibold"
-                android:textAlignment="center"
+                android:gravity="center_horizontal"
                 android:paddingStart="10dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:text="All time"
                 android:textColor="@color/gray"
-                android:textSize="17sp"/>
+                android:textSize="14sp"/>
             <TextView
                 android:id="@+id/today"
                 android:layout_width="120dp"
@@ -57,14 +59,14 @@
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/background_lite_gray_roundshape"
                 android:fontFamily="@font/sfpro_display_semibold"
-                android:textAlignment="center"
+                android:gravity="center_horizontal"
                 android:paddingStart="10dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:text="Today"
                 android:textColor="@color/gray"
-                android:textSize="17sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/yesterday"
@@ -74,29 +76,31 @@
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/background_lite_gray_roundshape"
                 android:fontFamily="@font/sfpro_display_semibold"
-                android:textAlignment="center"
+                android:gravity="center_horizontal"
                 android:paddingStart="10dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:text="Yesterday"
                 android:textColor="@color/gray"
-                android:textSize="17sp"/>
+                android:textSize="14sp"/>
 
             <TextView
                 android:id="@+id/this_week"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
                 android:background="@drawable/background_lite_gray_roundshape"
                 android:fontFamily="@font/sfpro_display_semibold"
-                android:textAlignment="center"
+                android:gravity="center_horizontal"
                 android:paddingStart="10dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:text="This Week"
                 android:textColor="@color/gray"
-                android:textSize="17sp"/>
+                android:textSize="14sp"/>
 
             <TextView
                 android:id="@+id/this_month"
@@ -106,14 +110,14 @@
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/background_lite_gray_roundshape"
                 android:fontFamily="@font/sfpro_display_semibold"
-                android:textAlignment="center"
+                android:gravity="center_horizontal"
                 android:paddingStart="10dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:text="This Month"
                 android:textColor="@color/gray"
-                android:textSize="17sp"/>
+                android:textSize="14sp"/>
             <TextView
                 android:id="@+id/last_month"
                 android:layout_width="120dp"
@@ -122,21 +126,23 @@
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/background_lite_gray_roundshape"
                 android:fontFamily="@font/sfpro_display_semibold"
-                android:textAlignment="center"
+                android:gravity="center_horizontal"
                 android:paddingStart="10dp"
                 android:paddingLeft="10dp"
                 android:paddingTop="7dp"
                 android:paddingBottom="7dp"
                 android:text="Last month"
                 android:textColor="@color/gray"
-                android:textSize="17sp"/>
+                android:textSize="14sp"/>
         </LinearLayout>
     </HorizontalScrollView>
     <RelativeLayout
+        android:layout_below="@+id/hztl_scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-       android:gravity="center">
+        android:gravity="center"
+        android:visibility="gone">
         <ImageView
             android:id="@+id/empty_img"
             android:layout_width="match_parent"
@@ -164,20 +170,28 @@
             android:textColor="@color/gray"
             android:gravity="center"
             android:text="@string/empty_desc"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/emty_desc"
-            android:textColor="@color/white"
-            android:text="Share Store"
-            android:textSize="17sp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/sfpro_display_semibold"
-            android:background="@drawable/btn_navitext_color_bkg"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:paddingStart="30dp"
-            android:paddingEnd="30dp"
-            android:layout_centerHorizontal="true"/>
     </RelativeLayout>
-</LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recy_order_all"
+        android:layout_below="@+id/hztl_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/txt_add_order"
+        android:visibility="visible"/>
+    <TextView
+        android:id="@+id/txt_add_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:text="Add Order"
+        android:textSize="17sp"
+        android:padding="20dp"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:elevation="7dp"
+        android:fontFamily="@font/sfpro_display_semibold"
+        android:background="@drawable/btn_green_color_bkg"/>
+</RelativeLayout>

@@ -5,6 +5,13 @@
     <string name="empty_desc">share your store s link with your customers on social media to get more orders.</string>
     <string name="login">Please enter your mobile number for verification</string>
 
+    <string name="error_msg_unknown">An unexpected error occurred</string>
+    <string name="error_msg_no_internet">Not connected to internet</string>
+    <string name="error_msg_timeout">The server took too long to respond</string>
+    <string name="share_product">Share Product</string>
+    <string name="in_stock">In stock</string>
+    <string name="add_new_product">Add new product</string>
+
     <string-array name="type">
         <item>Life Time</item>
         <item> Yesterday</item>

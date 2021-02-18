@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toolbar;
 
 import com.reliableservices.venderapp.R;
+import com.reliableservices.venderapp.activitys.DiscountCoupanActivity;
 import com.reliableservices.venderapp.activitys.ExtraChargeActivity;
 
 
@@ -29,7 +30,6 @@ public class ManageFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,7 +56,7 @@ public class ManageFragment extends Fragment {
         extra_charges.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getActivity(), ExtraChargeActivity.class);
+                Intent i = new Intent(getActivity(),ExtraChargeActivity.class);
                 startActivity(i);
             }
         });
@@ -64,7 +64,7 @@ public class ManageFragment extends Fragment {
         discount_coupan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getActivity(),ManageFragment.class);
+                Intent i = new Intent(getActivity(),DiscountCoupanActivity.class);
                 startActivity(i);
             }
         });

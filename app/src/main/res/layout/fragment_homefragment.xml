@@ -141,7 +141,7 @@
                         <TextView
                             android:layout_width="100dp"
                             android:layout_height="wrap_content"
-                            android:textSize="13sp"
+                            android:textSize="14sp"
                             android:textColor="@color/gray"
                             android:fontFamily="@font/sfpro_display_regular"
                             android:padding="4dp"
@@ -149,7 +149,7 @@
                         <TextView
                             android:layout_width="160dp"
                             android:layout_height="wrap_content"
-                            android:textSize="21sp"
+                            android:textSize="19sp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/sfpro_display_regular"
                             android:padding="3dp"
@@ -168,7 +168,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="13sp"
+                            android:textSize="14sp"
                             android:textColor="@color/gray"
                             android:fontFamily="@font/sfpro_display_regular"
                             android:padding="4dp"
@@ -176,7 +176,7 @@
                         <TextView
                             android:layout_width="160dp"
                             android:layout_height="wrap_content"
-                            android:textSize="21sp"
+                            android:textSize="19sp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/sfpro_display_regular"
                             android:padding="3dp"
@@ -199,7 +199,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="13sp"
+                            android:textSize="14sp"
                             android:textColor="@color/gray"
                             android:fontFamily="@font/sfpro_display_regular"
                             android:padding="4dp"
@@ -208,7 +208,7 @@
                         <TextView
                             android:layout_width="160dp"
                             android:layout_height="wrap_content"
-                            android:textSize="21sp"
+                            android:textSize="19sp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/sfpro_display_regular"
                             android:padding="3dp"
@@ -226,7 +226,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="13sp"
+                            android:textSize="14sp"
                             android:textColor="@color/gray"
                             android:fontFamily="@font/sfpro_display_regular"
                             android:padding="4dp"
@@ -234,7 +234,7 @@
                         <TextView
                             android:layout_width="160dp"
                             android:layout_height="wrap_content"
-                            android:textSize="21sp"
+                            android:textSize="19sp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/sfpro_display_regular"
                             android:padding="3dp"
@@ -285,7 +285,7 @@
                         android:layout_height="wrap_content"
                         android:paddingTop="7dp"
                         android:paddingBottom="7dp"
-                        android:textSize="17sp"
+                        android:textSize="14sp"
                         android:textColor="@color/gray"
                         android:fontFamily="@font/sfpro_display_regular"
                         android:background="@drawable/background_lite_gray_roundshape"
@@ -299,7 +299,7 @@
                         android:paddingTop="7dp"
                         android:layout_marginStart="5dp"
                         android:paddingBottom="7dp"
-                        android:textSize="17sp"
+                        android:textSize="14sp"
                         android:textColor="@color/gray"
                         android:fontFamily="@font/sfpro_display_regular"
                         android:background="@drawable/background_lite_gray_roundshape"
@@ -312,7 +312,7 @@
                         android:layout_height="wrap_content"
                         android:paddingTop="7dp"
                         android:paddingBottom="7dp"
-                        android:textSize="17sp"
+                        android:textSize="14sp"
                         android:layout_marginStart="5dp"
                         android:textColor="@color/gray"
                         android:fontFamily="@font/sfpro_display_regular"

@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".fragments.ProductFragment">
 
     <LinearLayout
+        android:id="@+id/lnr_toolbar"
         android:layout_width="match_parent"
         android:layout_height="110dp"
+        android:orientation="vertical"
         android:background="@color/colorNavText">
 
         <TextView
@@ -22,11 +25,46 @@
             android:padding="10dp"
             android:drawableEnd="@drawable/ic_baseline_search_24"
             android:drawableRight="@drawable/ic_baseline_search_24"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:tabIndicatorHeight="5dp"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextAppearance="@style/MyMenuTextAppearance"
+            app:tabBackground="@color/colorNavText"
+            app:tabTextColor="@color/white"
+            app:tabPaddingStart="8dp"
+            app:tabPaddingEnd="8dp">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Products"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categories"/>
+
+        </com.google.android.material.tabs.TabLayout>
     </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_below="@+id/lnr_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:visibility="gone"
         android:gravity="center">
         <ImageView
             android:id="@+id/empty_img"
@@ -57,26 +95,20 @@
             android:textColor="@color/gray"
             android:gravity="center"
             android:text="@string/empty_desc"/>
-        <TextView
-            android:id="@+id/add_product"
-            android:layout_below="@+id/emty_desc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="add new product"
-            android:fontFamily="@font/sfpro_display_semibold"
-            android:textSize="17sp"
-            android:background="@drawable/btn_green_color_bkg"
-            android:textColor="@color/white"
-            android:elevation="7dp"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
-            android:paddingStart="30dp"
-            android:paddingEnd="30dp"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:layout_centerHorizontal="true"/>
     </RelativeLayout>
+    <TextView
+        android:id="@+id/add_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_new_product"
+        android:fontFamily="@font/sfpro_display_semibold"
+        android:textSize="17sp"
+        android:background="@drawable/btn_green_color_bkg"
+        android:textColor="@color/white"
+        android:elevation="7dp"
+        android:layout_margin="40dp"
+        android:padding="20dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"/>
 
-
-
-</LinearLayout>
+</RelativeLayout>

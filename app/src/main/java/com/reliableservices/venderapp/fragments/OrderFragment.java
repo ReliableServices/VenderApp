@@ -5,6 +5,9 @@ import android.os.Bundle;
 
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,12 +16,18 @@ import android.widget.TextView;
 import android.widget.Toolbar;
 
 import com.reliableservices.venderapp.R;
+import com.reliableservices.venderapp.adpters.OrderAllAdapter;
+
+import java.util.ArrayList;
+import java.util.Collections;
 
 import static com.reliableservices.venderapp.R.drawable.background_lite_gray_roundshape;
 import static com.reliableservices.venderapp.R.drawable.btn_status_background;
 
 public class OrderFragment extends Fragment {
     private TextView last_month,this_month,this_week,yesterday,today,alltime;
+    private RecyclerView recy_order_all;
+    private OrderAllAdapter orderAllAdapter;
     private Toolbar toolbar;
     public OrderFragment() {
 
@@ -37,6 +46,7 @@ public class OrderFragment extends Fragment {
         return view;
     }
     private void start(View view) {
+        recy_order_all = view.findViewById(R.id.recy_order_all);
         alltime = view.findViewById(R.id.alltime);
         today = view.findViewById(R.id.today);
         yesterday = view.findViewById(R.id.yesterday);
@@ -44,7 +54,20 @@ public class OrderFragment extends Fragment {
         this_month = view.findViewById(R.id.this_month);
         last_month = view.findViewById(R.id.last_month);
     }
+
+    //horizontal scrolling button
     private void process() {
+        String [] catname =  {"Fashion", "Mobiles", "Electronics", "Home", "Beauty", "Furniture", "Grocery"};
+
+        ArrayList<String> orederList = new ArrayList<>();
+        Collections.addAll(orederList, catname);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
+        recy_order_all.setLayoutManager(layoutManager);
+        recy_order_all.setItemAnimator(new DefaultItemAnimator());
+        OrderAllAdapter orderAllAdapter = new OrderAllAdapter(orederList, getContext());
+        recy_order_all.setAdapter(orderAllAdapter);
+
+
         alltime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,5 +122,7 @@ public class OrderFragment extends Fragment {
         textview.setTextColor(getResources().getColor(R.color.white));
         textview.setBackgroundResource(btn_status_background);
     }
+
+    //scrolling exit
 
 }

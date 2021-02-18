@@ -10,8 +10,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/gray"
-        >
+        android:background="@color/gray">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,7 +31,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
-          android:textSize="19sp"
+          android:textSize="16sp"
           android:text="Marketing Design"
           android:drawablePadding="20dp"
           android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
@@ -46,7 +45,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
-          android:textSize="19sp"
+          android:textSize="16sp"
           android:text="Discount Coupans"
           android:drawablePadding="20dp"
           android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
@@ -60,7 +59,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
-          android:textSize="19sp"
+          android:textSize="16sp"
           android:text="My Customers"
           android:drawableStart="@drawable/ic_baseline_person_outline_24"
           android:drawablePadding="20dp"
@@ -74,7 +73,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
-          android:textSize="19sp"
+          android:textSize="16sp"
           android:text="Store QR Code"
           android:drawableStart="@drawable/ic_barcode"
           android:drawablePadding="20dp"
@@ -88,7 +87,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
-          android:textSize="19sp"
+          android:textSize="16sp"
           android:text="Extra Charges"
           android:drawableStart="@drawable/ic_rupee"
           android:drawablePadding="20dp"
@@ -106,7 +105,7 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:textColor="@color/black"
-              android:textSize="19sp"
+              android:textSize="16sp"
               android:text="WhatsApp Chat Support"
               android:drawableStart="@drawable/ic_customer_service"
               android:drawablePadding="20dp"
@@ -121,7 +120,7 @@
               android:layout_alignParentEnd="true"
               android:layout_margin="20dp"
               tools:ignore="UseSwitchCompatOrMaterialXml"
-              android:layout_alignParentRight="true" />
+              android:layout_alignParentRight="true"/>
 
       </RelativeLayout>
 
