@@ -1,10 +1,8 @@
 package com.reliableservices.venderapp.fragments;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 
-import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -14,8 +12,12 @@ import android.widget.TextView;
 import android.widget.Toolbar;
 
 import com.reliableservices.venderapp.R;
+import com.reliableservices.venderapp.activitys.MarketingActivity;
+import com.reliableservices.venderapp.activitys.PromoCardActivity;
 import com.reliableservices.venderapp.activitys.DiscountCoupanActivity;
 import com.reliableservices.venderapp.activitys.ExtraChargeActivity;
+import com.reliableservices.venderapp.activitys.MyCustomerActivity;
+import com.reliableservices.venderapp.activitys.StroreORcodeActivity;
 
 
 public class ManageFragment extends Fragment {
@@ -61,10 +63,36 @@ public class ManageFragment extends Fragment {
             }
         });
 
+
+        marketing_design.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), MarketingActivity.class);
+                startActivity(i);
+            }
+        });
+
+
         discount_coupan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(),DiscountCoupanActivity.class);
+                startActivity(i);
+            }
+        });
+
+        my_customers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), MyCustomerActivity.class);
+                startActivity(i);
+            }
+        });
+
+        store_qr_code.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), StroreORcodeActivity.class);
                 startActivity(i);
             }
         });

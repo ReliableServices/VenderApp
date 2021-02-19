@@ -24,7 +24,6 @@ public class ExtraChargeActivity extends AppCompatActivity {
 
     }
 
-
     private void start() {
         toolbar_layout = findViewById(R.id.toolbar_layout);
     }

@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.reliableservices.venderapp.R;
 import com.reliableservices.venderapp.adpters.OrderAllAdapter;
+import com.reliableservices.venderapp.adpters.ProdListAdapter;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -44,14 +45,14 @@ public class ProductListFragment extends Fragment {
         recy_prod_list = view.findViewById(R.id.recy_prod_list);
     }
     private void process() {
-        String [] catname =  {"Fashion", "Mobiles", "Electronics", "Home", "Beauty", "Furniture", "Grocery"};
-        ArrayList<String> orederList = new ArrayList<>();
-        Collections.addAll(orederList, catname);
+        String [] catname =  {"Poco", "samsung", "VIVO Pro", "Oppo", "Moto", "Nokiya", "Xaomi"};
+        ArrayList<String> productList = new ArrayList<>();
+        Collections.addAll(productList, catname);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
         recy_prod_list.setLayoutManager(layoutManager);
         recy_prod_list.setItemAnimator(new DefaultItemAnimator());
-        OrderAllAdapter orderAllAdapter = new OrderAllAdapter(orederList, getContext());
-        recy_prod_list.setAdapter(orderAllAdapter);
+        ProdListAdapter prodListAdapter = new ProdListAdapter(productList, getContext());
+        recy_prod_list.setAdapter(prodListAdapter);
 
     }
 }

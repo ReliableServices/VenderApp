@@ -5,55 +5,70 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".activitys.StroreORcode">
+    android:background="@color/colorNavIcon"
+    tools:context=".activitys.StroreORcodeActivity">
 
     <include layout="@layout/toolbar_layout"/>
-    <androidx.cardview.widget.CardView
-        android:layout_width="380dp"
-        android:layout_height="600dp"
+    <LinearLayout
+        android:layout_below="@+id/toolbar_layout"
+        android:layout_above="@+id/btn_print"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:elevation="11dp"
-        app:cardCornerRadius="7dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/btn_bkg_rect"
         >
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="300dp"
-           android:background="@color/colorNavText"
-           android:orientation="vertical"
-           android:weightSum="1">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="11dp"
+            app:cardCornerRadius="7dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/colorNavText"
+                android:orientation="vertical"
+                android:weightSum="1">
 
-           <TextView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:textColor="@color/white"
-               android:textSize="21sp"
-               android:textAlignment="center"
-               android:fontFamily="@font/sfpro_display_regular"
-               android:text="We support"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="21sp"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:fontFamily="@font/sfpro_display_regular"
+                    android:text="We support"/>
 
-           <TextView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:textColor="@color/white"
-               android:textSize="24sp"
-               android:textAlignment="center"
-               android:fontFamily="@font/sfpro_display_heavy"
-               android:text="#DigitalIndia"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:fontFamily="@font/sfpro_display_heavy"
+                    android:text="#DigitalIndia"/>
 
-           <TextView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:textColor="@color/white"
-               android:textSize="14sp"
-               android:textAlignment="center"
-               android:fontFamily="@font/sfpro_display_regular"
-               android:text="Scan QR to check our products"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:fontFamily="@font/sfpro_display_regular"
+                    android:text="Scan QR to check our products"/>
 
-       </LinearLayout>
+            </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
 
     <TextView
+        android:id="@+id/btn_print"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

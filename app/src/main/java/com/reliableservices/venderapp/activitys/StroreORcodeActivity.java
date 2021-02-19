@@ -8,7 +8,7 @@ import android.view.View;
 
 import com.reliableservices.venderapp.R;
 
-public class StroreORcode extends AppCompatActivity {
+public class StroreORcodeActivity extends AppCompatActivity {
      private Toolbar toolbar_layout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

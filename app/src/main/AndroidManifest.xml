@@ -6,10 +6,10 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage"/>
+        tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -23,7 +23,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VenderApp">
-        <activity android:name=".activitys.StroreORcode"></activity>
+        <activity android:name=".activitys.OnlinePaymentActivity"></activity>
+        <activity android:name=".activitys.BusinessCardActivity" />
+        <activity android:name=".activitys.WhatspStoriesActivity" />
+        <activity android:name=".activitys.MarketingActivity" />
+        <activity android:name=".activitys.PromoCardActivity" />
+        <activity android:name=".activitys.BusinessCard" />
+        <activity android:name=".activitys.MyCustomerActivity" />
+        <activity android:name=".activitys.StroreORcodeActivity" />
         <activity android:name=".activitys.DiscountCoupanActivity" />
         <activity android:name=".activitys.ExtraChargeActivity" />
         <activity android:name=".activitys.AddVariants" />
@@ -34,7 +41,8 @@
         <activity android:name=".activitys.OtpActivity" />
         <activity android:name=".activitys.LoginActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -57,8 +57,7 @@ public class OrderFragment extends Fragment {
 
     //horizontal scrolling button
     private void process() {
-        String [] catname =  {"Fashion", "Mobiles", "Electronics", "Home", "Beauty", "Furniture", "Grocery"};
-
+        String [] catname =  {"Poco", "samsung", "VIVO Pro", "Oppo", "Moto", "Nokiya", "Xaomi"};
         ArrayList<String> orederList = new ArrayList<>();
         Collections.addAll(orederList, catname);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
@@ -67,6 +66,8 @@ public class OrderFragment extends Fragment {
         OrderAllAdapter orderAllAdapter = new OrderAllAdapter(orederList, getContext());
         recy_order_all.setAdapter(orderAllAdapter);
 
+        alltime.setBackgroundResource(btn_status_background);
+        alltime.setTextColor(getResources().getColor(R.color.white));
 
         alltime.setOnClickListener(new View.OnClickListener() {
             @Override

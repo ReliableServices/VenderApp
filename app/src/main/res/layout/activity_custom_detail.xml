@@ -67,6 +67,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="4dp"
+                    android:layout_marginStart="5dp"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/sugar"
@@ -261,7 +262,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="17sp"
+                        android:textSize="14sp"
                         android:textColor="@color/gray"
                         android:fontFamily="@font/sfpro_display_regular"
                         android:text="Address :"/>
@@ -282,7 +283,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="17sp"
+                        android:textSize="14sp"
                         android:textColor="@color/gray"
                         android:fontFamily="@font/sfpro_display_regular"
                         android:text="Payment :"/>
@@ -318,7 +319,7 @@
                         android:id="@+id/c_address"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="17sp"
+                        android:textSize="14sp"
                         android:textColor="@color/gray"
                         android:fontFamily="@font/sfpro_display_medium"
                         android:text="Babylon tower,Raipur"/>
@@ -342,7 +343,7 @@
                         android:id="@+id/c_payment"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="17sp"
+                        android:textSize="14sp"
                         android:textColor="@color/gray"
                         android:fontFamily="@font/sfpro_display_medium"
                         android:text="cash on Delivery"/>
