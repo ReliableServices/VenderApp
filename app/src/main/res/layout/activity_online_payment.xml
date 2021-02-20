@@ -1,176 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".activitys.OnlinePaymentActivity">
 
-    <include layout="@layout/toolbar_layout"/>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:src="@drawable/otp_screen_image"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/gray"
-        android:textSize="16sp"
-        android:paddingStart="25dp"
-        android:paddingTop="25dp"
-        android:fontFamily="@font/sfpro_display_regular"
-        android:text="VERIFY USING"/>
-
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="20dp">
-        <RadioButton
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/gray"
-            android:fontFamily="@font/sfpro_display_semibold"
-            android:text="UPI ID"/>
-        <RadioButton
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textColor="@color/gray"
-            android:fontFamily="@font/sfpro_display_semibold"
-            android:text="Bank Details"/>
-    </RadioGroup>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="gone">
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/Enter_upi_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:padding="25dp"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/sfpro_display_regular"
-                android:hint="Enter UPI ID *"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/account_holder_name_bank"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:padding="25dp"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/sfpro_display_regular"
-                android:hint="Account Holder Name*"/>
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="visible">
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/account_number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:padding="25dp"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/sfpro_display_regular"
-                android:hint="Account Number *"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/account_holder_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:padding="25dp"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/sfpro_display_regular"
-                android:hint="Account Holder Name*"/>
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/ifsc_code"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:padding="25dp"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/sfpro_display_regular"
-                android:hint="IFSC Code*"/>
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/gery_inactive"/>
-
     <RelativeLayout
+        android:id="@+id/toolbar_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <CheckBox
-            android:id="@+id/checkBox"
+        android:layout_height="wrap_content"
+        android:padding="17dp"
+        android:orientation="horizontal"
+        android:background="@color/colorNavText">
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="I accept all"
-            />
-        <TextView
-            android:layout_toRightOf="@+id/checkBox"
-            android:id="@+id/term_condition"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Terms and conditions"
-            android:fontFamily="@font/sfpro_display_semibold"
-            android:textColor="@color/blue_color"
-            />
-        <TextView
-           android:layout_below="@+id/term_condition"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Verify Bank Account"
-            android:gravity="center_horizontal"
-            android:background="@drawable/btn_bkg_rect"
-            android:layout_margin="20dp"
-            android:padding="17dp"/>
-
-
+            android:text="@string/online_payment"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sfpro_display_semibold"/>
+        <ImageView
+            android:id="@+id/payment_query"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_question"/>
     </RelativeLayout>
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/upi_payment_banner"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:textSize="16sp"
+                android:paddingStart="25dp"
+                android:paddingTop="10dp"
+                android:fontFamily="@font/sfpro_display_regular"
+                android:text="@string/verify_using"/>
+            <RadioGroup
+                android:id="@+id/payment_method"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp">
+                <RadioButton
+                    android:layout_weight="1"
+                    android:id="@+id/upi_radio_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:checked="true"
+                    android:textColor="@color/gray"
+                    android:fontFamily="@font/sfpro_display_semibold"
+                    android:text="@string/upi_id"/>
+                <RadioButton
+                    android:id="@+id/bank_detail_radio_btn"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/gray"
+                    android:fontFamily="@font/sfpro_display_semibold"
+                    android:text="@string/bank_details"/>
+            </RadioGroup>
+            <LinearLayout
+                android:id="@+id/linear_upi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/Enter_upi_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:padding="20dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/sfpro_display_regular"
+                        android:hint="@string/enter_upi_id"/>
+                </com.google.android.material.textfield.TextInputLayout>
 
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/account_holder_name_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:padding="20dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/sfpro_display_regular"
+                        android:hint="@string/account_holder_name"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/upi_payment_img"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/account_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:padding="20dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/sfpro_display_regular"
+                        android:hint="@string/account_number"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/account_holder_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:padding="20dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/sfpro_display_regular"
+                        android:hint="@string/account_holder_name"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ifsc_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:padding="20dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/sfpro_display_regular"
+                        android:hint="@string/ifsc_code"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gery_inactive"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:id="@+id/checkBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/i_accept_all"
+                        android:textColor="@color/gray"
+                        android:fontFamily="@font/sfpro_display_regular"/>
+                    <TextView
+                        android:id="@+id/term_condition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/terms_and_conditions"
+                        android:fontFamily="@font/sfpro_display_semibold"
+                        android:textColor="@color/blue_color"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/btn_verify_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/verify_bank_account"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/btn_bkg_rect"
+                    android:elevation="7dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:padding="17dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

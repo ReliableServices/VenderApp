@@ -42,7 +42,12 @@ public class Homefragment extends Fragment {
     shipped = view.findViewById(R.id.shipped);
     }
 
+
     private void process() {
+
+        pending.setTextColor(getResources().getColor(R.color.white));
+        pending.setBackgroundResource(btn_status_background);
+
         pending.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {

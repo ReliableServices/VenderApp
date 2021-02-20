@@ -13,6 +13,7 @@ import android.widget.Toolbar;
 
 import com.reliableservices.venderapp.R;
 import com.reliableservices.venderapp.activitys.MarketingActivity;
+import com.reliableservices.venderapp.activitys.OnlinePaymentActivity;
 import com.reliableservices.venderapp.activitys.PromoCardActivity;
 import com.reliableservices.venderapp.activitys.DiscountCoupanActivity;
 import com.reliableservices.venderapp.activitys.ExtraChargeActivity;
@@ -22,7 +23,7 @@ import com.reliableservices.venderapp.activitys.StroreORcodeActivity;
 
 public class ManageFragment extends Fragment {
     private Toolbar toolbar;
-    private TextView extra_charges,wtsp_chat_support,marketing_design,discount_coupan,my_customers,store_qr_code;
+    private TextView extra_charges,wtsp_chat_support,marketing_design,discount_coupan,my_customers,store_qr_code,online_payment;
 
     public ManageFragment() {
         // Required empty public constructor
@@ -52,9 +53,19 @@ public class ManageFragment extends Fragment {
         discount_coupan = view.findViewById(R.id.discount_coupan);
         my_customers = view.findViewById(R.id.my_customers);
         store_qr_code = view.findViewById(R.id.store_qr_code);
+        online_payment = view.findViewById(R.id.online_payment);
     }
 
     private void process() {
+
+        online_payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), OnlinePaymentActivity.class);
+                startActivity(i);
+            }
+        });
+
         extra_charges.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

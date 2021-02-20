@@ -27,6 +27,21 @@
       android:layout_height="match_parent"
       android:orientation="vertical">
       <TextView
+          android:id="@+id/online_payment"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="@color/black"
+          android:textSize="16sp"
+          android:text="@string/online_payment"
+          android:drawablePadding="20dp"
+          android:fontFamily="@font/sfpro_display_regular"
+          android:padding="15dp"
+          android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+          app:drawableStartCompat="@drawable/ic_moneytransfer"
+          app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
+          tools:ignore="UseCompatTextViewDrawableXml"/>
+
+      <TextView
           android:id="@+id/marketing_design"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
@@ -46,56 +61,58 @@
           android:layout_height="wrap_content"
           android:textColor="@color/black"
           android:textSize="16sp"
-          android:text="Discount Coupans"
+          android:text="@string/discount_coupans"
           android:drawablePadding="20dp"
-          android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
           android:fontFamily="@font/sfpro_display_regular"
           android:padding="15dp"
-          android:drawableLeft="@drawable/ic_social_media"
-          android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
-          app:drawableStartCompat="@drawable/ic_discount" />
+          android:drawableStart="@drawable/ic_social_media"
+          android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+          app:drawableStartCompat="@drawable/ic_discount"
+          app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
+          tools:ignore="UseCompatTextViewDrawableXml" />
       <TextView
           android:id="@+id/my_customers"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
           android:textSize="16sp"
-          android:text="My Customers"
-          android:drawableStart="@drawable/ic_baseline_person_outline_24"
+          android:text="@string/my_customers"
           android:drawablePadding="20dp"
-          android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
           android:fontFamily="@font/sfpro_display_regular"
           android:padding="15dp"
-          android:drawableLeft="@drawable/ic_social_media"
-          android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24" />
+          android:drawableStart="@drawable/ic_social_media"
+          android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+          app:drawableStartCompat="@drawable/ic_baseline_person_outline_24"
+          app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
+          tools:ignore="UseCompatTextViewDrawableXml" />
       <TextView
           android:id="@+id/store_qr_code"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
           android:textSize="16sp"
-          android:text="Store QR Code"
-          android:drawableStart="@drawable/ic_barcode"
+          android:text="@string/store_qr_code"
           android:drawablePadding="20dp"
-          android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
           android:fontFamily="@font/sfpro_display_regular"
           android:padding="15dp"
-          android:drawableLeft="@drawable/ic_social_media"
-          android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24" />
+          android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+          app:drawableStartCompat="@drawable/ic_barcode"
+          app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
+          tools:ignore="UseCompatTextViewDrawableXml" />
       <TextView
           android:id="@+id/extra_charges"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
           android:textSize="16sp"
-          android:text="Extra Charges"
-          android:drawableStart="@drawable/ic_rupee"
+          android:text="@string/extra_charges"
           android:drawablePadding="20dp"
-          android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
           android:fontFamily="@font/sfpro_display_regular"
           android:padding="15dp"
-          android:drawableLeft="@drawable/ic_social_media"
-          android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24" />
+          app:drawableStartCompat="@drawable/ic_rupee"
+          app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
+          app:drawableLeftCompat="@drawable/ic_social_media"
+          app:drawableRightCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
       <RelativeLayout
           android:layout_width="match_parent"
@@ -106,23 +123,18 @@
               android:layout_height="wrap_content"
               android:textColor="@color/black"
               android:textSize="16sp"
-              android:text="WhatsApp Chat Support"
-              android:drawableStart="@drawable/ic_customer_service"
+              android:text="@string/whatsapp_chat_support"
               android:drawablePadding="20dp"
               android:fontFamily="@font/sfpro_display_regular"
               android:padding="15dp"
-              android:drawableLeft="@drawable/ic_lock"
-              />
+              app:drawableStartCompat="@drawable/ic_whatsapp__1_" />
           <Switch
               android:id="@+id/switch1"
               android:layout_width="60dp"
               android:layout_height="wrap_content"
               android:layout_alignParentEnd="true"
               android:layout_margin="20dp"
-              tools:ignore="UseSwitchCompatOrMaterialXml"
-              android:layout_alignParentRight="true"/>
-
+              tools:ignore="UseSwitchCompatOrMaterialXml" />
       </RelativeLayout>
-
   </LinearLayout>
 </LinearLayout>

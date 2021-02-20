@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">VenderApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="empty_desc">share your store s link with your customers on social media to get more orders.</string>
     <string name="login">Please enter your mobile number for verification</string>
@@ -12,7 +11,29 @@
     <string name="in_stock">In stock</string>
     <string name="add_new_product">Add new product</string>
     <string name="this_will_allow_customers_to_see_it_while_applying_the_n_coupan">This will allow customers to see it while applying the \n coupan.</string>
+    <string name="online_payment">Online Payment</string>
+    <string name="discount_coupans">Discount Coupans</string>
+    <string name="my_customers">My Customers</string>
+    <string name="store_qr_code">Store QR Code</string>
+    <string name="extra_charges">Extra Charges</string>
+    <string name="whatsapp_chat_support">WhatsApp Chat Support</string>
+    <string name="verify_bank_account">Verify Bank Account</string>
+    <string name="terms_and_conditions">Terms and conditions</string>
+    <string name="i_accept_all">I accept all</string>
+    <string name="ifsc_code">IFSC Code*</string>
+    <string name="account_holder_name">Account Holder Name*</string>
+    <string name="account_number">Account Number *</string>
+    <string name="enter_upi_id">Enter UPI ID *</string>
+    <string name="bank_details">Bank Details</string>
+    <string name="upi_id">UPI ID</string>
+    <string name="verify_using">VERIFY USING</string>
 
+    <string name="search_title">Search</string>
+    <string name="search_hint">Enter Text to Speech</string>
+    <string name="customer_pays_online_for_the_orders">customer pays online for the orders</string>
+    <string name="how_it_works">How it works</string>
+    <string name="amount_on_hold">Amount on hold</string>
+    <string name="u20b9">₹_ _ _</string>
     <string-array name="type">
         <item>Life Time</item>
         <item> Yesterday</item>

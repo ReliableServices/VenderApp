@@ -7,14 +7,7 @@
     android:background="@color/colorNavIcon"
     tools:context=".fragments.Homefragment">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+
             <RelativeLayout
                 android:id="@+id/switch_Relativie"
                 android:layout_width="match_parent"
@@ -41,6 +34,17 @@
                     tools:ignore="UseSwitchCompatOrMaterialXml"
                     android:layout_alignParentRight="true"/>
             </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/switch_Relativie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
             <LinearLayout
                 android:id="@+id/lnr_share"
                 android:layout_width="match_parent"
@@ -319,8 +323,6 @@
                         android:background="@drawable/background_lite_gray_roundshape"
                         android:text="Shipped"
                         android:gravity="center"/>
-
-
                 </LinearLayout>
                 <TextView
                     android:layout_width="match_parent"
