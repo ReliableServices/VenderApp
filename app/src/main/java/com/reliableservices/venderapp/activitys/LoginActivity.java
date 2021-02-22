@@ -11,7 +11,8 @@ import com.reliableservices.venderapp.R;
 
 
 public class LoginActivity extends AppCompatActivity {
-    private TextView Login_btn;
+    private TextView Login_btn,newRegister;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +29,17 @@ public class LoginActivity extends AppCompatActivity {
     }
     private void start() {
         Login_btn = findViewById(R.id.Login_btn);
+        newRegister  =findViewById(R.id.newRegister);
     }
 
     private void process() {
+
+        newRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LoginActivity.this, VenderRegistrationActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }

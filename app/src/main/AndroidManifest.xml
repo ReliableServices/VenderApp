@@ -22,8 +22,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.VenderApp">
-        <activity android:name=".activitys.OnlinePaymentActivity"></activity>
+        android:theme="@style/Theme.VenderApp"
+        android:usesCleartextTraffic="true"
+        >
+        <activity android:name=".activitys.VenderRegistrationActivity" />
+        <activity android:name=".activitys.OnlinePaymentActivity" />
         <activity android:name=".activitys.BusinessCardActivity" />
         <activity android:name=".activitys.WhatspStoriesActivity" />
         <activity android:name=".activitys.MarketingActivity" />

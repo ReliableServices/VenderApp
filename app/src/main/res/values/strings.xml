@@ -40,6 +40,8 @@
     <string name="this_week">This Week</string>
     <string name="this_month">This Month</string>
     <string name="add_order">Add Order</string>
+    <string name="amount_gets_credited_to_your_n_bank_account">Amount Gets credited to your \n bank account</string>
+    <string name="instantly">INSTANTLY</string>
     <string-array name="type">
         <item>Life Time</item>
         <item> Yesterday</item>

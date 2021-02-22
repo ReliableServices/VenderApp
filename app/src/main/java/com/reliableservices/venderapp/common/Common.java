@@ -4,10 +4,10 @@ public interface Common {
     //Mypc local
 //    String BASE_URL="http://192.168.43.44/broker/";
     //local
-    String BASE_URL="http://192.168.1.102:8080/fulloncrm_new/crm/broker_mobile_app_api/";
+    String BASE_URL="http://192.168.1.102:8080/i_audit/i_audit/account_sup/Vender_mobile_api/";
     //Online
     //String BASE_URL="http://iaudit.net.in/superlogin/delivery_app_api/";
-    String API_KEY="broker@2K20";
+    String API_KEY="Vender@2021";
     String SUCCESS="success";
     int RESPONSE_CODE=200;
     String USER_ID="user_id";
@@ -22,8 +22,8 @@ public interface Common {
     String PHOTO="photo";
     String GEO_LOCATION="geo_location";
     String IS_LOGIN="is_login";
-    String DOC_URL="http://192.168.1.102:8080/fulloncrm_new/crm/client/upload_doc/";
-    String P_DOC_URL="http://192.168.1.102:8080/fulloncrm_new/crm/broker_mobile_app_api/profile_img/";
+//    String DOC_URL="http://192.168.1.102:8080/fulloncrm_new/crm/client/upload_doc/";
+//    String P_DOC_URL="http://192.168.1.102:8080/fulloncrm_new/crm/broker_mobile_app_api/profile_img/";
 //    String DOC_URL="http://192.168.43.44/broker/upload_doc/";
 
 

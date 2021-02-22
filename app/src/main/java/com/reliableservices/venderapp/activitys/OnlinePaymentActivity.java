@@ -75,12 +75,12 @@ public class OnlinePaymentActivity extends AppCompatActivity {
                 int index = group.indexOfChild(radioButton);
                 // Add logic here
                 switch (index) {
-                    case 0: // first button
+                    case 0:
                         linear_upi.setVisibility(View.VISIBLE);
                         linear_bank.setVisibility(View.GONE);
                         btn_verify_bank.setText("Verify UPI");
                         break;
-                    case 1: // secondbutton
+                    case 1:
                         linear_upi.setVisibility(View.GONE);
                         linear_bank.setVisibility(View.VISIBLE);
                         btn_verify_bank.setText("Verify Bank Details");

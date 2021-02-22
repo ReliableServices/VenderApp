@@ -72,7 +72,6 @@
                 android:paddingBottom="30dp"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/shape_border_rect"/>
-
         </RelativeLayout>
         <View
             android:layout_width="4dp"
@@ -110,7 +109,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Amount Gets credited to your \n bank account"
+                android:text="@string/amount_gets_credited_to_your_n_bank_account"
                 android:textColor="@color/green"
                 android:fontFamily="@font/sfpro_display_regular"
                 android:textAllCaps="true"
@@ -121,16 +120,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="INSTANTLY"
+                android:text="@string/instantly"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sfpro_display_bold"
                 android:textAllCaps="true"
                 android:padding="10dp"
                 android:textSize="21sp"
                 android:layout_gravity="center"
-                android:drawableStart="@drawable/ic_shining"
                 android:drawablePadding="10dp"
-                android:gravity="center"/>
+                android:gravity="center"
+                app:drawableStartCompat="@drawable/ic_shining" />
         </LinearLayout>
 
     </LinearLayout>
