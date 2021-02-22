@@ -14,4 +14,5 @@ public class BusiRegModel {
     private String state;
     private String city;
     private String pin_code;
+    private String password;
 }
