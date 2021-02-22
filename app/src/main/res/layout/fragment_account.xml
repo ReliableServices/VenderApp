@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/gray"
+        android:background="@color/colorNavText"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -17,10 +17,9 @@
             android:text="Account"
             android:textSize="19sp"
             android:padding="22dp"
-            android:textAlignment="center"
             android:textColor="@color/white"
             android:fontFamily="@font/sfpro_display_semibold"
-            android:layout_centerInParent="true"
+            android:layout_marginStart="20dp"
             />
         <TextView
             android:id="@+id/support_aleart"

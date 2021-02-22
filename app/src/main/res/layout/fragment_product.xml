@@ -8,26 +8,63 @@
     tools:context=".fragments.ProductFragment">
 
     <LinearLayout
-        android:id="@+id/lnr_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:orientation="vertical"
-        android:background="@color/colorNavText">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <TextView
+        <RelativeLayout
+            android:id="@+id/toolbar_layout"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:text="Catalogue"
-            android:textSize="21sp"
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:fontFamily="@font/sfpro_display_bold"
-            android:padding="10dp"
-            android:drawableEnd="@drawable/ic_baseline_search_24"
-            android:drawableRight="@drawable/ic_baseline_search_24"/>
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:orientation="horizontal"
+            android:background="@color/colorNavText"
+            android:visibility="visible">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Catalogue"
+                android:textSize="19sp"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/sfpro_display_semibold"/>
+            <ImageView
+                android:id="@+id/search_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_baseline_search_24"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/toolbar_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorNavText"
+            >
+
+            <SearchView
+                android:id="@+id/search_bar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content"
+                android:queryHint="@string/search_title"
+                android:iconifiedByDefault="false"/>
+
+            <ImageView
+                android:id="@+id/clear_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_clear_24"/>
+        </LinearLayout>
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
+            android:layout_below="@+id/toolbar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -50,52 +87,52 @@
                 android:text="Categories"/>
 
         </com.google.android.material.tabs.TabLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_below="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/empty_img"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_clipboard"/>
+
+            <TextView
+                android:id="@+id/txt_emty"
+                android:layout_below="@+id/empty_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Add products to your online store"/>
+
+            <TextView
+                android:id="@+id/emty_desc"
+                android:layout_below="@+id/txt_emty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="17sp"
+                android:textColor="@color/gray"
+                android:gravity="center"
+                android:text="@string/empty_desc"/>
+        </RelativeLayout>
     </LinearLayout>
 
-
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_below="@+id/lnr_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </FrameLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:visibility="gone"
-        android:gravity="center">
-        <ImageView
-            android:id="@+id/empty_img"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_marginTop="20dp"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/ic_clipboard"/>
-
-        <TextView
-            android:id="@+id/txt_emty"
-            android:layout_below="@+id/empty_img"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="17sp"
-            android:textColor="@color/black"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="Add products to your online store"/>
-
-        <TextView
-            android:id="@+id/emty_desc"
-            android:layout_below="@+id/txt_emty"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textSize="17sp"
-            android:textColor="@color/gray"
-            android:gravity="center"
-            android:text="@string/empty_desc"/>
-    </RelativeLayout>
     <TextView
         android:id="@+id/add_product"
         android:layout_width="match_parent"

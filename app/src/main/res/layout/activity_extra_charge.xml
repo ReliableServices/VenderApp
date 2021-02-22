@@ -44,7 +44,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:padding="20dp"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
                         android:textSize="14sp"
                         android:textColor="@color/black"
                         android:fontFamily="@font/sfpro_display_regular"
@@ -63,7 +64,8 @@
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:padding="20dp"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
                             android:textSize="14sp"
                             android:textColor="@color/black"
                             android:fontFamily="@font/sfpro_display_regular"
@@ -121,8 +123,8 @@
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:padding="22dp"
+
+                        android:paddingBottom="22dp"
                         android:textSize="14sp"
                         android:textColor="@color/black"
                         android:fontFamily="@font/sfpro_display_regular"

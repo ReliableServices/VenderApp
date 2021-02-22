@@ -12,7 +12,7 @@
                 android:id="@+id/switch_Relativie"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:background="@color/teal_700">
+                android:background="@color/colorNavText">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

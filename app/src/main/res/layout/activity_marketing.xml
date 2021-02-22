@@ -3,25 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".activitys.MarketingActivity">
 
     <include layout="@layout/toolbar_layout"/>
 
-    <LinearLayout
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:orientation="horizontal">
+        android:rowCount="2"
+        android:columnCount="2">
 
-        <RelativeLayout
-            android:id="@+id/bussiness_card"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+       <!-- <RelativeLayout
+            android:layout_width="175dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:padding="15dp"
             android:background="@drawable/market_business_bkg">
 
             <ImageView
@@ -29,7 +26,65 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerInParent="true"
-                android:src="@drawable/ic_advertisement"/>
+                android:src="@drawable/ic_advertisement"
+                />
+            <TextView
+                android:id="@+id/business_card_txt"
+                android:layout_below="@+id/business_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:text="Business Card"
+                android:textColor="@color/green"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+               />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/promo_card_relative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:padding="15dp"
+            android:background="@drawable/market_business_bkg">
+
+            <ImageView
+                android:id="@+id/promo_banner_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_card"
+                />
+
+            <TextView
+                android:id="@+id/Promo_banner_txt"
+                android:layout_below="@+id/promo_banner_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:text="Promo Banners"
+                android:textColor="@color/green"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"/>
+        </RelativeLayout>-->
+        <RelativeLayout
+            android:id="@+id/bussiness_card"
+            android:layout_width="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:background="@drawable/market_business_bkg">
+
+            <ImageView
+                android:id="@+id/business_card"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_advertisement"
+                />
 
             <TextView
                 android:id="@+id/business_card_txt"
@@ -38,18 +93,20 @@
                 android:layout_height="wrap_content"
                 android:textSize="17sp"
                 android:text="Business Card"
-                android:textColor="@color/green"
+                android:fontFamily="@font/sfpro_display_bold"
+                android:textColor="@color/white"
                 android:layout_marginTop="20dp"
                 android:gravity="center_horizontal"/>
-        </RelativeLayout>
 
+        </RelativeLayout>
         <RelativeLayout
             android:id="@+id/promo_card_relative"
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:padding="15dp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
             android:background="@drawable/market_business_bkg">
 
             <ImageView
@@ -66,38 +123,39 @@
                 android:layout_height="wrap_content"
                 android:textSize="17sp"
                 android:text="Promo Banners"
-                android:textColor="@color/green"
+                android:textColor="@color/white"
+                android:fontFamily="@font/sfpro_display_bold"
                 android:layout_marginTop="20dp"
                 android:gravity="center_horizontal"/>
         </RelativeLayout>
-    </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/whatsp_stories_relative"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:padding="10dp"
-        android:background="@drawable/market_business_bkg">
-
-        <ImageView
-            android:id="@+id/whatsp_store_img"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_whatsapp__1_"/>
-
-        <TextView
-            android:id="@+id/whatsp_store_txt"
-            android:layout_below="@+id/whatsp_store_img"
-            android:layout_width="match_parent"
+        <RelativeLayout
+            android:id="@+id/whatsp_stories_relative"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
             android:layout_height="wrap_content"
-            android:textSize="17sp"
-            android:text="Promo Banners"
-            android:textColor="@color/green"
-            android:layout_marginTop="20dp"
-            android:gravity="center_horizontal"/>
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:background="@drawable/market_business_bkg">
 
-    </RelativeLayout>
-
+            <ImageView
+                android:id="@+id/whatsp_store_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_whatsapp__1_"/>
+            <TextView
+                android:id="@+id/whatsp_store_txt"
+                android:layout_below="@+id/whatsp_store_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:fontFamily="@font/sfpro_display_bold"
+                android:text="Whatsapp Stories"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"/>
+        </RelativeLayout>
+    </GridLayout>
 </LinearLayout>

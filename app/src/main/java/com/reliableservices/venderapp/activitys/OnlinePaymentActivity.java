@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,8 +53,8 @@ public class OnlinePaymentActivity extends AppCompatActivity {
         payment_query.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
-                View dialogView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.bank_query_dialog, null);
+                AlertDialog.Builder builder = new AlertDialog.Builder(OnlinePaymentActivity.this);
+                View dialogView = LayoutInflater.from(OnlinePaymentActivity.this).inflate(R.layout.bank_query_dialog, null);
                 builder.setView(dialogView);
                 AlertDialog alertDialog = builder.create();
                 alertDialog.show();
@@ -88,9 +89,11 @@ public class OnlinePaymentActivity extends AppCompatActivity {
             }
         });
 
+
+
         if(checkBox.isChecked())
         {
-
+            Toast.makeText(this, "check button checked ", Toast.LENGTH_SHORT).show();
         }else{
 
         }

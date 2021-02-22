@@ -16,7 +16,7 @@
     <string name="my_customers">My Customers</string>
     <string name="store_qr_code">Store QR Code</string>
     <string name="extra_charges">Extra Charges</string>
-    <string name="whatsapp_chat_support">WhatsApp Chat Support</string>
+    <string name="whatsapp_chat_support"> Chat Support</string>
     <string name="verify_bank_account">Verify Bank Account</string>
     <string name="terms_and_conditions">Terms and conditions</string>
     <string name="i_accept_all">I accept all</string>
@@ -34,6 +34,12 @@
     <string name="how_it_works">How it works</string>
     <string name="amount_on_hold">Amount on hold</string>
     <string name="u20b9">₹_ _ _</string>
+    <string name="all_time">All time</string>
+    <string name="all_orders">All Orders</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="this_week">This Week</string>
+    <string name="this_month">This Month</string>
+    <string name="add_order">Add Order</string>
     <string-array name="type">
         <item>Life Time</item>
         <item> Yesterday</item>
