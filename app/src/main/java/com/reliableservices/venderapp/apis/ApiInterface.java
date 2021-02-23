@@ -27,13 +27,20 @@ public interface ApiInterface {
 
     @GET("login_process.php")
     Call<BusiRegsWrapper> getLogin(@Query("api_key") String api_key,
-                                    @Query("mobile") TextView mobile,
-                                    @Query("password") TextView password);
+                                    @Query("mobile") String mobile,
+                                    @Query("password") String password);
 
     // lead open call
-    @GET("lead_open_log.php")
-    Call<BaseResponse> leadOpen(@Query("api_key") String api_key,
-                                @Query("data") String mobile);
+    @GET("forgot_otp.php")
+    Call<BaseResponse> forgotPassword(@Query("api_key") String api_key,
+                                      @Query("mobile") String mobile,
+                                      @Query("otp") String otp);
+
+    @GET("update_password.php")
+    Call<BaseResponse> updatePassword(@Query("api_key") String api_key,
+                                      @Query("password") String password,
+                                       @Query("mobile") String mobile);
+
     /*Upload new property add form */
    /* @Multipart
     @POST("forsaleha.php")

@@ -1,5 +1,6 @@
 package com.reliableservices.venderapp.fragments;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -16,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toolbar;
 
 import com.reliableservices.venderapp.R;
+import com.reliableservices.venderapp.activitys.AddOrderActivity;
 import com.reliableservices.venderapp.adpters.OrderAllAdapter;
 
 import java.util.ArrayList;
@@ -25,7 +27,7 @@ import static com.reliableservices.venderapp.R.drawable.background_lite_gray_rou
 import static com.reliableservices.venderapp.R.drawable.btn_status_background;
 
 public class OrderFragment extends Fragment {
-    private TextView last_month,this_month,this_week,yesterday,today,alltime;
+    private TextView last_month,this_month,this_week,yesterday,today,alltime,txt_add_order;
     private RecyclerView recy_order_all;
     private OrderAllAdapter orderAllAdapter;
     private Toolbar toolbar;
@@ -53,10 +55,20 @@ public class OrderFragment extends Fragment {
         this_week = view.findViewById(R.id.this_week);
         this_month = view.findViewById(R.id.this_month);
         last_month = view.findViewById(R.id.last_month);
+        txt_add_order = view.findViewById(R.id.txt_add_order);
     }
 
     //horizontal scrolling button
     private void process() {
+
+        txt_add_order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), AddOrderActivity.class);
+                startActivity(i);
+            }
+        });
+
         String [] catname =  {"Poco", "samsung", "VIVO Pro", "Oppo", "Moto", "Nokiya", "Xaomi"};
         ArrayList<String> orederList = new ArrayList<>();
         Collections.addAll(orederList, catname);

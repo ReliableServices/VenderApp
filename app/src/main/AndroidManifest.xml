@@ -23,8 +23,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VenderApp"
-        android:usesCleartextTraffic="true"
-        >
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activitys.AddOrderActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".activitys.ForgotPasswordActivity" />
         <activity android:name=".activitys.VenderRegistrationActivity" />
         <activity android:name=".activitys.OnlinePaymentActivity" />
         <activity android:name=".activitys.BusinessCardActivity" />
@@ -45,10 +48,8 @@
         <activity android:name=".activitys.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

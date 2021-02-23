@@ -176,6 +176,7 @@
                 android:drawableLeft="@drawable/ic_social_media"
                 />
             <TextView
+                android:id="@+id/sign_out"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
