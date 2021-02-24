@@ -10,7 +10,7 @@ public class BusiRegModel {
     private String mobile;
     private String person_name;
     private String email;
-    private String country;
+    private String address;
     private String state;
     private String city;
     private String pin_code;

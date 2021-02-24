@@ -64,7 +64,7 @@
             android:background="@drawable/btn_bkg_rect"
             android:fontFamily="@font/sfpro_display_medium"
             android:hint="New Password"
-            android:inputType="number"
+            android:inputType="textPassword"
             android:padding="16dp"
             android:textSize="16sp" />
 
@@ -79,7 +79,7 @@
             android:background="@drawable/btn_bkg_rect"
             android:fontFamily="@font/sfpro_display_medium"
             android:hint="Confirm Password"
-            android:inputType="number"
+            android:inputType="textPassword"
             android:padding="16dp"
             android:textSize="16sp" />
 

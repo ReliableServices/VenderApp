@@ -7,9 +7,12 @@
     android:orientation="vertical"
     tools:context=".activitys.VenderRegistrationActivity">
     <include layout="@layout/toolbar_layout"/>
-
+<ScrollView
+    android:layout_below="@+id/toolbar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
     <LinearLayout
-        android:layout_below="@+id/toolbar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -24,7 +27,9 @@
                 android:paddingTop="20dp"
                 android:paddingBottom="20dp"
                 android:textSize="14sp"
+                android:lines="1"
                 android:textColor="@color/black"
+                android:inputType="text"
                 android:fontFamily="@font/sfpro_display_regular"
                 android:hint="Business Name "/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -40,6 +45,8 @@
                 android:paddingTop="20dp"
                 android:paddingBottom="20dp"
                 android:textSize="14sp"
+                android:inputType="number"
+                android:lines="1"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sfpro_display_regular"
                 android:hint="Mobile Number"/>
@@ -56,6 +63,8 @@
                 android:paddingTop="20dp"
                 android:paddingBottom="20dp"
                 android:textSize="14sp"
+                android:inputType="text"
+                android:lines="1"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sfpro_display_regular"
                 android:hint="Contact Person Name"/>
@@ -71,24 +80,11 @@
                 android:paddingTop="20dp"
                 android:paddingBottom="20dp"
                 android:textSize="14sp"
+                android:lines="1"
+                android:inputType="textEmailAddress"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sfpro_display_regular"
-                android:hint="enter Email Id"/>
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:id="@+id/country_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/sfpro_display_regular"
-                android:hint="Country Name"/>
+                android:hint="Enter Email Id"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -101,6 +97,8 @@
                 android:paddingTop="20dp"
                 android:paddingBottom="20dp"
                 android:textSize="14sp"
+                android:inputType="text"
+                android:lines="1"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sfpro_display_regular"
                 android:hint="State Name"/>
@@ -116,6 +114,8 @@
                 android:paddingTop="20dp"
                 android:paddingBottom="20dp"
                 android:textSize="14sp"
+                android:lines="1"
+                android:inputType="text"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sfpro_display_regular"
                 android:hint="City Name"/>
@@ -131,28 +131,48 @@
                 android:paddingTop="20dp"
                 android:paddingBottom="20dp"
                 android:textSize="14sp"
+                android:inputType="number"
+                android:lines="1"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sfpro_display_regular"
                 android:hint="Pincode"/>
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/full_Address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textSize="14sp"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sfpro_display_regular"
+                android:hint="Full Address"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/finish_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingStart="70dp"
+            android:paddingEnd="70dp"
+            android:textSize="17sp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sfpro_display_medium"
+            android:background="@drawable/btn_status_background"
+            android:text="Finish"
+            android:layout_gravity="center"
+            />
     </LinearLayout>
-  //finish_btn,bussiness_name,mobile_nume,contact_person_name,email_id,country_name,state_name,city,pincode
-    <TextView
-        android:id="@+id/finish_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-        android:paddingStart="60dp"
-        android:paddingEnd="60dp"
-        android:textSize="17sp"
-        android:layout_marginBottom="20dp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/sfpro_display_medium"
-        android:background="@drawable/btn_status_background"
-        android:text="Finish"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
+</ScrollView>
+
 
 </RelativeLayout>

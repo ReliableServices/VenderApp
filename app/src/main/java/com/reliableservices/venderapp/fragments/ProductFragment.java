@@ -27,17 +27,18 @@ import android.widget.TextView;
 import com.google.android.material.tabs.TabLayout;
 import com.reliableservices.venderapp.R;
 import com.reliableservices.venderapp.activitys.AddProductActivity;
+import com.reliableservices.venderapp.activitys.CreateCategoryActivity;
 import com.reliableservices.venderapp.adpters.ProdListAdapter;
 
 import java.util.ArrayList;
 
 
-public class ProductFragment extends Fragment  {
+public class ProductFragment extends Fragment {
     private TabLayout tabLayout;
     private TextView add_product;
     private Fragment fragment;
     private SearchView searchView;
-    private ImageView clear_btn,search_btn;
+    private ImageView clear_btn, search_btn;
     private LinearLayout toolbar_layout_2;
     private RelativeLayout toolbar_layout;
 //    ProdListAdapter prodListAdapter;
@@ -46,10 +47,12 @@ public class ProductFragment extends Fragment  {
     public ProductFragment() {
 
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -74,7 +77,6 @@ public class ProductFragment extends Fragment  {
     }
 
 
-
     private void process() {
         search_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,7 +92,7 @@ public class ProductFragment extends Fragment  {
                 toolbar_layout_2.setVisibility(View.GONE);
             }
         });
-       searchView  = new SearchView(getContext());
+        searchView = new SearchView(getContext());
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -103,42 +105,48 @@ public class ProductFragment extends Fragment  {
             }
         });
 
-
-        loadFragment(new ProductListFragment());
+        loadFragment(new CategoryListFragment());
+        add_product.setText("Create New Category");
+        add_product.setTag("category");
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                // Fragment fragment = null;
                 switch (tab.getPosition()) {
                     case 0:
-                        loadFragment(new ProductListFragment());
+                        loadFragment(new CategoryListFragment());
+                        add_product.setText("Create New Category");
+                        add_product.setTag("category");
                         break;
                     case 1:
-                        loadFragment(new CategoryListFragment());
+                        loadFragment(new ProductListFragment());
+                        add_product.setText("Add New Product");
+                        add_product.setTag("product");
                         break;
                 }
             }
+
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
 
             }
-
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
 
             }
         });
-
         add_product.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-        Intent i = new Intent(getActivity(),AddProductActivity.class);
-        startActivity(i);
-        }
-     });
-
+            @Override
+            public void onClick(View v) {
+                if (add_product.getTag().equals("category")) {
+                    Intent i = new Intent(getActivity(), CreateCategoryActivity.class);
+                    startActivity(i);
+                } else {
+                    Intent i = new Intent(getActivity(),  AddProductActivity.class);
+                    startActivity(i);
+                }
+            }
+        });
     }
-
     private void loadFragment(Fragment fragment) {
         FragmentManager fm = getActivity().getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();

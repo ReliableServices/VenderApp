@@ -21,7 +21,7 @@ import retrofit2.http.Query;
 public interface ApiInterface {
 
 
-    @GET("broker_register.php")
+    @GET("business_registration.php")
     Call<BusiRegsWrapper> registration(@Query("api_key") String api_key,
                                        @Query("data") String data);
 

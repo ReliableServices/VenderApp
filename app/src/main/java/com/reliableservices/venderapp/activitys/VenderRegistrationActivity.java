@@ -28,7 +28,7 @@ import retrofit2.Response;
 
 public class VenderRegistrationActivity extends AppCompatActivity {
     private Toolbar toolbar_layout;
-    private EditText bussiness_name,mobile_nume,contact_person_name,email_id,country_name,state_name,city,pincode;
+    private EditText bussiness_name,mobile_nume,full_Address,contact_person_name,email_id,state_name,city,pincode;
     private TextView finish_btn;
     private ProgressDialog progressDialog;
     @Override
@@ -43,24 +43,35 @@ public class VenderRegistrationActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         toolbar_layout = findViewById(R.id.toolbar_layout);
         finish_btn = findViewById(R.id.finish_btn);
+        full_Address = findViewById(R.id.full_Address);
         bussiness_name  =findViewById(R.id.bussiness_name);
         mobile_nume = findViewById(R.id.mobile_nume);
         contact_person_name = findViewById(R.id.contact_person_name);
         email_id = findViewById(R.id.email_id);
-        country_name = findViewById(R.id.country_name);
         state_name = findViewById(R.id.state_name);
         city= findViewById(R.id.city);
         pincode= findViewById(R.id.pincode);
     }
 
     private void process() {
-        toolbar_layout.setTitle("Enter Your Business Details");
+        toolbar_layout.setTitle("New Vender Registration");
+        setSupportActionBar(toolbar_layout);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar_layout.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
+        toolbar_layout.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
        finish_btn.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
                BusiRegistration();
            }
        });
+
 
     }
 
@@ -84,8 +95,8 @@ public class VenderRegistrationActivity extends AppCompatActivity {
             mobile_nume.requestFocus();
             MDToast mdToast = MDToast.makeText(getApplicationContext(), "Enter valid 10 digit  Number", MDToast.LENGTH_SHORT, MDToast.TYPE_WARNING);
             mdToast.show();
-        }else if (country_name.getText().toString().trim().equals("")) {
-            country_name.requestFocus();
+        }else if (full_Address.getText().toString().trim().equals("")) {
+            full_Address.requestFocus();
             MDToast mdToast = MDToast.makeText(getApplicationContext(), "Enter Country Name Id", MDToast.LENGTH_SHORT, MDToast.TYPE_WARNING);
             mdToast.show();
         }else if (state_name.getText().toString().trim().equals("")) {
@@ -103,14 +114,13 @@ public class VenderRegistrationActivity extends AppCompatActivity {
         }else {
             BusiRegModel busiRegModel = new BusiRegModel();
             busiRegModel.setCompany_name(bussiness_name.getText().toString());
+            busiRegModel.setMobile(mobile_nume.getText().toString());
             busiRegModel.setPerson_name(contact_person_name.getText().toString());
             busiRegModel.setEmail(email_id.getText().toString());
-            busiRegModel.setMobile(mobile_nume.getText().toString());
-            busiRegModel.setCountry(country_name.getText().toString());
+            busiRegModel.setAddress(full_Address.getText().toString());
             busiRegModel.setState(state_name.getText().toString());
             busiRegModel.setCity(city.getText().toString());
-            busiRegModel.setPerson_name(pincode.getText().toString());
-
+            busiRegModel.setPin_code(pincode.getText().toString());
             progressDialog.show();
             Call<BusiRegsWrapper> call = RetrofitCall.getApi().registration(new GlobalMethods().Base64Encode(Common.API_KEY),""+new Gson().toJson(busiRegModel));
 //            Log.d("AAAAAAAAAA", "?api_key="+new GlobalMethods().Base64Encode(Common.API_KEY)+"&data="+new Gson().toJson(busiRegModel));

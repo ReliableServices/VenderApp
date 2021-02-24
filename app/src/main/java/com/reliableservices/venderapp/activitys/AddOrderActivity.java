@@ -30,14 +30,14 @@ public class AddOrderActivity extends AppCompatActivity {
         house_num = findViewById(R.id.house_num);
         land_mark = findViewById(R.id.land_mark);
         area = findViewById(R.id.area);
-        state = findViewById(R.id.state);
+        state = findViewById(R.id.state_name);
         pincode = findViewById(R.id.pincode);
         distric = findViewById(R.id.distric);
         add_order = findViewById(R.id.add_order);
         toolbar_layout = findViewById(R.id.toolbar_layout);
     }
     private void process() {
-        toolbar_layout.setTitle(" Order Entry  ");
+        toolbar_layout.setTitle(" Order Entry ");
         setSupportActionBar(toolbar_layout);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar_layout.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);

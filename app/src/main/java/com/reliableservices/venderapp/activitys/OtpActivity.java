@@ -90,6 +90,8 @@ public class OtpActivity extends AppCompatActivity {
                                     shareUtils.saveString(Common.GEO_LOCATION,loginDataWrapper.getData().get(0).getGeo_location());*/
                                     Intent i = new Intent(OtpActivity.this, LoginActivity.class);
                                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
+                                    Toast.makeText(OtpActivity.this,busiRegsWrapper.getMessage(),Toast.LENGTH_SHORT).show();
                                     startActivity(i);
                                 }else
                                 {
