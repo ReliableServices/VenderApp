@@ -20,8 +20,14 @@ import com.reliableservices.venderapp.common.Common;
 import com.reliableservices.venderapp.common.GlobalMethods;
 import com.reliableservices.venderapp.modelclass.BusiRegModel;
 import com.reliableservices.venderapp.modelclass.BusiRegsWrapper;
+import com.reliableservices.venderapp.modelclass.CityStateData;
+import com.reliableservices.venderapp.modelclass.wrapperClass.CityStatePinWrapper;
 import com.valdesekamdem.library.mdtoast.MDToast;
 
+import java.util.ArrayList;
+
+import in.galaxyofandroid.spinerdialog.OnSpinerItemClick;
+import in.galaxyofandroid.spinerdialog.SpinnerDialog;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -31,6 +37,7 @@ public class VenderRegistrationActivity extends AppCompatActivity {
     private EditText bussiness_name,mobile_nume,full_Address,contact_person_name,email_id,state_name,city,pincode;
     private TextView finish_btn;
     private ProgressDialog progressDialog;
+    private SpinnerDialog spinnerDialog,spinnerDialog2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +72,17 @@ public class VenderRegistrationActivity extends AppCompatActivity {
             }
         });
 
+        try {
+            getState();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            getDistrict();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
        finish_btn.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
@@ -73,6 +91,112 @@ public class VenderRegistrationActivity extends AppCompatActivity {
        });
 
 
+    }
+
+    private void setupState(final ArrayList<CityStateData> cityStateData)
+    {
+        state_name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                spinnerDialog2.showSpinerDialog();
+            }
+        });
+        ArrayList<String> model_name=new ArrayList<>();
+        for(CityStateData rs: cityStateData)
+        {
+            if (rs.getName()!=null) {
+                model_name.add(rs.getName());
+            }
+        }
+        spinnerDialog2=new SpinnerDialog(VenderRegistrationActivity.this,model_name,"Select or Search State",R.style.DialogAnimations_SmileWindow,"Close ");// With 	Animation
+        spinnerDialog2.bindOnSpinerListener(new OnSpinerItemClick() {
+            @Override
+            public void onClick(String item, int position) {
+
+                for (CityStateData data:cityStateData){
+                    if(data.getName().equals(item)){
+                        state_name.setText(item);
+                        String state_id = data.getId();
+                    }
+                }
+            }
+        });
+
+    }
+
+    private void setupDistrict(final ArrayList<CityStateData> cityStateData)
+    {
+        city.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                spinnerDialog.showSpinerDialog();
+            }
+        });
+        ArrayList<String> model_name=new ArrayList<>();
+        for(CityStateData rs: cityStateData)
+        {
+            if (rs.getName()!=null) {
+                model_name.add(rs.getName());
+            }
+        }
+        spinnerDialog=new SpinnerDialog(VenderRegistrationActivity.this,model_name,"Select or Search State",R.style.DialogAnimations_SmileWindow,"Close ");// With 	Animation
+        spinnerDialog.bindOnSpinerListener(new OnSpinerItemClick() {
+            @Override
+            public void onClick(String item, int position) {
+                for (CityStateData data:cityStateData){
+                    if(data.getName().equals(item)){
+                        city.setText(item);
+                        String state_id = data.getId();
+                    }
+                }
+            }
+        });
+    }
+    private void getState()
+    {
+        Call<CityStatePinWrapper> call = RetrofitCall.getApi().getPlace(new GlobalMethods().Base64Encode(Common.API_KEY),"state");
+        call.enqueue(new Callback<CityStatePinWrapper>() {
+            @Override
+            public void onResponse(Call<CityStatePinWrapper> call, Response<CityStatePinWrapper> response) {
+                CityStatePinWrapper data= response.body();
+                if (response.isSuccessful())
+                {
+                    if(data.getStatus().equals(Common.SUCCESS))
+                    {
+                        setupState(data.getData());
+                    }
+                }
+            }
+            @Override
+            public void onFailure(Call<CityStatePinWrapper> call, Throwable throwable) {
+                GlobalMethods.fetchErrorMessage(throwable,getApplicationContext());
+                Toast.makeText(getApplicationContext(),"Please Connect Internet",Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    private void getDistrict()
+    {
+        Call<CityStatePinWrapper> call = RetrofitCall.getApi().getPlace(new GlobalMethods().Base64Encode(Common.API_KEY),"distt");
+        call.enqueue(new Callback<CityStatePinWrapper>() {
+            @Override
+            public void onResponse(Call<CityStatePinWrapper> call, Response<CityStatePinWrapper> response) {
+                CityStatePinWrapper data= response.body();
+                if (response.isSuccessful())
+                {
+                    if(data.getStatus().equals(Common.SUCCESS))
+                    {
+                        setupDistrict(data.getData());
+                    }
+                }
+            }
+            @Override
+            public void onFailure(Call<CityStatePinWrapper> call, Throwable throwable) {
+                Toast.makeText(getApplicationContext(),"Please Connect Internet",Toast.LENGTH_SHORT).show();
+                GlobalMethods.fetchErrorMessage(throwable,getApplicationContext());
+            }
+        });
     }
 
     private void BusiRegistration() {
@@ -151,4 +275,6 @@ public class VenderRegistrationActivity extends AppCompatActivity {
     private static boolean isValidEmail(String email_id) {
         return !TextUtils.isEmpty(email_id) && android.util.Patterns.EMAIL_ADDRESS.matcher(email_id).matches();
     }
+
+
 }

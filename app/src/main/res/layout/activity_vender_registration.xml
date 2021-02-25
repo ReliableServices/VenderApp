@@ -69,6 +69,7 @@
                 android:fontFamily="@font/sfpro_display_regular"
                 android:hint="Contact Person Name"/>
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -86,40 +87,7 @@
                 android:fontFamily="@font/sfpro_display_regular"
                 android:hint="Enter Email Id"/>
         </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:id="@+id/state_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:textSize="14sp"
-                android:inputType="text"
-                android:lines="1"
-                android:textColor="@color/black"
-                android:fontFamily="@font/sfpro_display_regular"
-                android:hint="State Name"/>
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:id="@+id/city"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:textSize="14sp"
-                android:lines="1"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:fontFamily="@font/sfpro_display_regular"
-                android:hint="City Name"/>
-        </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -136,6 +104,46 @@
                 android:textColor="@color/black"
                 android:fontFamily="@font/sfpro_display_regular"
                 android:hint="Pincode"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/state_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textSize="14sp"
+                android:inputType="text"
+                android:lines="1"
+                android:editable="false"
+                android:clickable="true"
+                android:textColor="@color/black"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/sfpro_display_regular"
+                android:hint="State Name"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textSize="14sp"
+                android:lines="1"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sfpro_display_regular"
+                android:hint="City Name"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -154,13 +162,12 @@
                 android:fontFamily="@font/sfpro_display_regular"
                 android:hint="Full Address"/>
         </com.google.android.material.textfield.TextInputLayout>
-
         <TextView
             android:id="@+id/finish_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
             android:paddingStart="70dp"
             android:paddingEnd="70dp"
             android:textSize="17sp"
@@ -169,8 +176,7 @@
             android:fontFamily="@font/sfpro_display_medium"
             android:background="@drawable/btn_status_background"
             android:text="Finish"
-            android:layout_gravity="center"
-            />
+            android:layout_gravity="center"/>
     </LinearLayout>
 </ScrollView>
 

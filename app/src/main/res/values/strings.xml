@@ -1,4 +1,33 @@
 <resources>
+
+    <string-array name="packaging">
+        <item>Select Packaging* </item>
+        <item>Packet</item>
+        <item>Cartun</item>
+        <item>Box</item>
+        <item>Combo</item>
+        <item>Combo-1</item>
+        <item>Combo-2</item>
+        <item>Combo-3</item>
+    </string-array>
+
+    <string-array name="unit">
+        <item>Select Unit* </item>
+        <item>KG</item>
+        <item>Gram</item>
+        <item>ML</item>
+        <item>Liter</item>
+        <item>MM</item>
+        <item>FT</item>
+        <item>Meter</item>
+        <item>sq.ft</item>
+        <item>set</item>
+        <item>packet</item>
+        <item>capsule</item>
+        <item>inch</item>
+        <item>mm</item>
+        <item>sq.meter</item>
+    </string-array>
     <string name="app_name">VenderApp</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="empty_desc">share your store s link with your customers on social media to get more orders.</string>
