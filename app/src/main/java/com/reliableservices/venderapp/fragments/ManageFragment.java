@@ -14,16 +14,19 @@ import android.widget.Toolbar;
 import com.reliableservices.venderapp.R;
 import com.reliableservices.venderapp.activitys.MarketingActivity;
 import com.reliableservices.venderapp.activitys.OnlinePaymentActivity;
-import com.reliableservices.venderapp.activitys.PromoCardActivity;
 import com.reliableservices.venderapp.activitys.DiscountCoupanActivity;
 import com.reliableservices.venderapp.activitys.ExtraChargeActivity;
 import com.reliableservices.venderapp.activitys.MyCustomerActivity;
+import com.reliableservices.venderapp.activitys.PurchaseOrderListActivity;
+import com.reliableservices.venderapp.activitys.PurchaseStockActivity;
 import com.reliableservices.venderapp.activitys.StroreORcodeActivity;
 
 
 public class ManageFragment extends Fragment {
     private Toolbar toolbar;
-    private TextView extra_charges,wtsp_chat_support,marketing_design,discount_coupan,my_customers,store_qr_code,online_payment;
+    private TextView extra_charges,wtsp_chat_support,marketing_design
+            ,discount_coupan,my_customers,store_qr_code,online_payment,purchase_order,
+    purchase_list;
 
     public ManageFragment() {
         // Required empty public constructor
@@ -54,9 +57,27 @@ public class ManageFragment extends Fragment {
         my_customers = view.findViewById(R.id.my_customers);
         store_qr_code = view.findViewById(R.id.store_qr_code);
         online_payment = view.findViewById(R.id.online_payment);
+        purchase_order = view.findViewById(R.id.purchase_order);
+        purchase_list = view.findViewById(R.id.purchase_list);
     }
 
     private void process() {
+
+        purchase_order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), PurchaseStockActivity.class);
+                startActivity(i);
+            }
+        });
+
+        purchase_list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), PurchaseOrderListActivity.class);
+                startActivity(i);
+            }
+        });
 
         online_payment.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,13 +98,11 @@ public class ManageFragment extends Fragment {
 
         marketing_design.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v){
                 Intent i = new Intent(getActivity(), MarketingActivity.class);
                 startActivity(i);
             }
         });
-
-
         discount_coupan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

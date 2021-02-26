@@ -12,16 +12,12 @@ import com.reliableservices.venderapp.R;
 
 public class ExtraChargeActivity extends AppCompatActivity {
     private Toolbar toolbar_layout;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_extra_charge);
         start();
         process();
-
-
     }
 
     private void start() {

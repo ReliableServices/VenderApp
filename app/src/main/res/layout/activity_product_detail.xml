@@ -20,7 +20,6 @@
           android:layout_height="match_parent"
           android:layout_marginTop="20dp"
           android:orientation="vertical">
-
           <ImageView
               android:id="@+id/img_prod"
               android:layout_width="110dp"
@@ -46,12 +45,12 @@
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:layout_margin="10dp"
-                  android:padding="20dp"
+                  android:paddingTop="20dp"
+                  android:paddingBottom="20dp"
                   android:textSize="14sp"
                   android:textColor="@color/black"
                   android:fontFamily="@font/sfpro_display_regular"
-                  android:hint="Enter Product Name"
-                  />
+                  android:hint="Enter Product Name" />
           </com.google.android.material.textfield.TextInputLayout>
 
           <RelativeLayout
@@ -62,7 +61,8 @@
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:layout_margin="10dp"
-                  android:padding="20dp"
+                  android:paddingBottom="20dp"
+                  android:paddingTop="20dp"
                   android:textSize="14sp"
                   android:textColor="@color/black"
                   android:fontFamily="@font/sfpro_display_regular"
@@ -88,7 +88,8 @@
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:layout_margin="10dp"
-                  android:padding="20dp"
+                  android:paddingTop="20dp"
+                  android:paddingBottom="20dp"
                   android:textSize="14sp"
                   android:textColor="@color/black"
                   android:fontFamily="@font/sfpro_display_regular"
@@ -118,7 +119,8 @@
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:layout_margin="10dp"
-                      android:padding="20dp"
+                      android:paddingBottom="20dp"
+                      android:paddingTop="20dp"
                       android:textSize="14sp"
                       android:textColor="@color/black"
                       android:fontFamily="@font/sfpro_display_regular"
@@ -133,7 +135,8 @@
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:layout_margin="10dp"
-                      android:padding="20dp"
+                      android:paddingBottom="20dp"
+                      android:paddingTop="20dp"
                       android:textSize="14sp"
                       android:textColor="@color/black"
                       android:fontFamily="@font/sfpro_display_regular"
@@ -156,11 +159,11 @@
                       android:layout_height="wrap_content"
                       android:layout_marginStart="10dp"
                       android:paddingTop="20dp"
-                      android:paddingBottom="20dp"
+                      android:paddingBottom="18dp"
                       android:textSize="14sp"
                       android:textColor="@color/black"
                       android:fontFamily="@font/sfpro_display_regular"
-                      android:hint="Stock"/>
+                      android:hint="Opning Stock  "/>
               </com.google.android.material.textfield.TextInputLayout>
           <RelativeLayout
               android:layout_width="0dp"
@@ -181,8 +184,8 @@
                   android:layout_height="wrap_content"
                   android:layout_alignParentEnd="true"
                   android:entries="@array/unit"
-                  android:layout_margin="10dp"
-                  android:paddingBottom="10dp"
+                  android:paddingBottom="20dp"
+                  android:paddingTop="20dp"
                   />
           </RelativeLayout>
           </LinearLayout>
@@ -204,7 +207,8 @@
                   android:layout_height="wrap_content"
                   android:layout_alignParentEnd="true"
                   android:layout_margin="10dp"
-                  android:padding="20dp"
+                  android:paddingBottom="20dp"
+                  android:paddingTop="20dp"
                   android:entries="@array/packaging"/>
           </RelativeLayout>
 
@@ -217,7 +221,8 @@
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:layout_margin="10dp"
-                  android:padding="20dp"
+                  android:paddingBottom="20dp"
+                  android:paddingTop="20dp"
                   android:textSize="14sp"
                   android:textColor="@color/black"
                   android:fontFamily="@font/sfpro_display_regular"

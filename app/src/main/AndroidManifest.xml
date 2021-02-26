@@ -24,7 +24,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VenderApp"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activitys.CreateCategoryActivity"></activity>
+        <activity android:name=".activitys.PurchaseOrderListActivity"></activity>
+        <activity android:name=".activitys.PurchaseStockActivity" />
+        <activity android:name=".activitys.CreateCategoryActivity" />
         <activity
             android:name=".activitys.AddOrderActivity"
             android:windowSoftInputMode="adjustResize" />

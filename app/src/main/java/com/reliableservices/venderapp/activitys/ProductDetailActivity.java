@@ -16,7 +16,7 @@ import com.reliableservices.venderapp.R;
 public class ProductDetailActivity extends AppCompatActivity {
       private TextView variant_btn;
       private Toolbar toolbar_layout;
-      private ImageView add_category,add_comp_name;
+      private ImageView add_category,add_comp_name,img_prod;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +30,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         toolbar_layout = findViewById(R.id.toolbar_layout);
         add_category = findViewById(R.id.add_category);
         add_comp_name = findViewById(R.id.add_comp_name);
+        img_prod = findViewById(R.id.img_prod);
     }
     private void process() {
         toolbar_layout.setTitle("Product Details");
@@ -59,7 +60,14 @@ public class ProductDetailActivity extends AppCompatActivity {
             }
         });
 
-        add_comp_name .setOnClickListener(new View.OnClickListener() {
+        img_prod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        add_comp_name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(ProductDetailActivity.this);

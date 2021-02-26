@@ -8,21 +8,22 @@ import android.view.View;
 
 import com.reliableservices.venderapp.R;
 
-public class CustomDetailActivity extends AppCompatActivity {
-      private Toolbar toolbar_layout;
+public class PurchaseStockActivity extends AppCompatActivity {
+    private Toolbar toolbar_layout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_custom_detail);
-        start();
+        setContentView(R.layout.activity_purchase_stock);
+        init();
         process();
     }
 
-    private void start() {
+    private void init() {
         toolbar_layout = findViewById(R.id.toolbar_layout);
     }
+
     private void process() {
-        toolbar_layout.setTitle("Customer Details");
+        toolbar_layout.setTitle("Add Purchase Order ");
         setSupportActionBar(toolbar_layout);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar_layout.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
