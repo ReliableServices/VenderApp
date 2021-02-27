@@ -46,7 +46,6 @@ public class ManageFragment extends Fragment {
         process();
         return view;
     }
-
     private void start( View view)
     {
      toolbar = view.findViewById(R.id.toolbar);
@@ -65,7 +64,7 @@ public class ManageFragment extends Fragment {
 
         purchase_order.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v){
                 Intent i = new Intent(getActivity(), PurchaseStockActivity.class);
                 startActivity(i);
             }

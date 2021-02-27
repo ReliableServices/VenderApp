@@ -24,7 +24,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VenderApp"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activitys.PurchaseOrderListActivity"></activity>
+        <activity android:name=".activitys.AddCustNameActivity"></activity>
+        <activity android:name=".activitys.PurchaseOrderListActivity" />
         <activity android:name=".activitys.PurchaseStockActivity" />
         <activity android:name=".activitys.CreateCategoryActivity" />
         <activity
@@ -43,7 +44,7 @@
         <activity android:name=".activitys.StroreORcodeActivity" />
         <activity android:name=".activitys.DiscountCoupanActivity" />
         <activity android:name=".activitys.ExtraChargeActivity" />
-        <activity android:name=".activitys.AddVariants" />
+        <activity android:name=".activitys.AddVariantsActivity" />
         <activity android:name=".activitys.CustomDetailActivity" />
         <activity
             android:name=".activitys.ProductDetailActivity"

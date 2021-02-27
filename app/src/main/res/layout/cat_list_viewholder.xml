@@ -7,6 +7,7 @@
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cat_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -17,7 +18,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="7dp">
+            android:padding="2dp">
             <ImageView
                 android:id="@+id/product_img"
                 android:layout_width="100dp"
@@ -37,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/sfpro_display_semibold"
                     android:textSize="16sp"
-                    android:padding="5dp"
+                    android:padding="2dp"
                     android:textColor="@color/black"
                     android:text="1 ITEM"/>
                 <TextView
@@ -90,12 +91,10 @@
                         android:id="@+id/switch1"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:padding="10dp"
+                        android:padding="5dp"
                         tools:ignore="UseSwitchCompatOrMaterialXml"
-                        android:layout_alignParentRight="true"
-                        />
+                        android:layout_alignParentRight="true"/>
                 </RelativeLayout>
-
             </LinearLayout>
 
             <View
@@ -104,7 +103,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/extra_lite_gray"/>
-
             <TextView
                 android:id="@+id/txt_share"
                 android:layout_below="@+id/view1"

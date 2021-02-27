@@ -55,7 +55,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         variant_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(ProductDetailActivity.this,AddVariants.class);
+                Intent i = new Intent(ProductDetailActivity.this, AddVariantsActivity.class);
                 startActivity(i);
             }
         });

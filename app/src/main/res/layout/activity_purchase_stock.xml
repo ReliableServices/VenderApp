@@ -37,22 +37,7 @@
                 android:text="Add product images (up to 8)"
                 android:paddingLeft="10dp"/>
 
-       <!--     <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/p_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"
-                    android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/sfpro_display_regular"
-                    android:hint=" " />
-            </com.google.android.material.textfield.TextInputLayout>
--->
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">

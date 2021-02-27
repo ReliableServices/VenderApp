@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
@@ -31,6 +32,7 @@ public class OrderFragment extends Fragment {
     private RecyclerView recy_order_all;
     private OrderAllAdapter orderAllAdapter;
     private Toolbar toolbar;
+    private RelativeLayout empty_relative;
     public OrderFragment() {
 
     }
@@ -56,11 +58,11 @@ public class OrderFragment extends Fragment {
         this_month = view.findViewById(R.id.this_month);
         last_month = view.findViewById(R.id.last_month);
         txt_add_order = view.findViewById(R.id.txt_add_order);
+        empty_relative = view.findViewById(R.id.empty_relative);
     }
 
     //horizontal scrolling button
     private void process() {
-
         txt_add_order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +70,6 @@ public class OrderFragment extends Fragment {
                 startActivity(i);
             }
         });
-
         String [] catname =  {"Poco", "samsung", "VIVO Pro", "Oppo", "Moto", "Nokiya", "Xaomi"};
         ArrayList<String> orederList = new ArrayList<>();
         Collections.addAll(orederList, catname);
@@ -85,36 +86,48 @@ public class OrderFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 changeBg(alltime);
+                recy_order_all.setVisibility(View.VISIBLE);
+                empty_relative.setVisibility(View.GONE);
             }
         });
         today.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 changeBg(today);
+                recy_order_all.setVisibility(View.GONE);
+                empty_relative.setVisibility(View.VISIBLE);
             }
         });
         yesterday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 changeBg(yesterday);
+                recy_order_all.setVisibility(View.VISIBLE);
+                empty_relative.setVisibility(View.GONE);
             }
         });
         this_week.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 changeBg(this_week);
+                recy_order_all.setVisibility(View.GONE);
+                empty_relative.setVisibility(View.VISIBLE);
             }
         });
         this_month.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 changeBg(this_month);
+                recy_order_all.setVisibility(View.VISIBLE);
+                empty_relative.setVisibility(View.GONE);
             }
         });
         last_month.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 changeBg(last_month);
+                recy_order_all.setVisibility(View.GONE);
+                empty_relative.setVisibility(View.VISIBLE);
             }
         });
     }

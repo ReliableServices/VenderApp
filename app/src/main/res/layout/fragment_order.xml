@@ -132,6 +132,7 @@
         </LinearLayout>
     </HorizontalScrollView>
     <RelativeLayout
+        android:id="@+id/empty_relative"
         android:layout_below="@+id/hztl_scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

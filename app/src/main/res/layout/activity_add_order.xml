@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".activitys.AddOrderActivity">
 
@@ -18,22 +17,69 @@
         android:orientation="vertical"
         android:paddingBottom="20dp">
 
-        <com.google.android.material.textfield.TextInputLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <EditText
                 android:id="@+id/customer_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:paddingTop="20dp"
                 android:paddingBottom="20dp"
-                android:textSize="16sp"
+                android:paddingTop="20dp"
+                android:textSize="14sp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sfpro_display_regular"
                 android:hint="Enter Customer Name"
                 />
-        </com.google.android.material.textfield.TextInputLayout>
+            <ImageView
+                android:id="@+id/add_cust_name"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_addfile"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/so_date"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sfpro_display_regular"
+                    android:hint="SO Date*"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/so_no"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sfpro_display_regular"
+                    android:hint="SO No.*"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -47,57 +93,147 @@
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sfpro_display_regular"
-                android:hint="Item Name"
-                />
+                android:hint="Item Name"/>
         </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/so_validity"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sfpro_display_regular"
+                    android:hint="SO Validity*"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/po_no"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sfpro_display_regular"
+                    android:hint="PO No."/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <EditText
-                android:id="@+id/mrp"
+                android:id="@+id/bom_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:paddingTop="20dp"
                 android:paddingBottom="20dp"
-                android:textSize="16sp"
+                android:paddingTop="20dp"
+                android:textSize="14sp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sfpro_display_regular"
-                android:hint="MRP"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:id="@+id/sell_price"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:hint="BOM Description"/>
+            <ImageView
+                android:id="@+id/add_bom"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
                 android:layout_margin="10dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:textSize="16sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/sfpro_display_regular"
-                android:hint="Sell Price"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
+                android:padding="5dp"
+                android:src="@drawable/ic_addfile"/>
+        </RelativeLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:id="@+id/qty"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:textSize="16sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/sfpro_display_regular"
-                android:hint="QTY"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/unit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sfpro_display_regular"
+                    android:hint="Unit*"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sfpro_display_regular"
+                    android:hint="QTY*"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/amout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sfpro_display_regular"
+                    android:hint="Amout"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sfpro_display_regular"
+                    android:hint="Rate*"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -111,10 +247,47 @@
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sfpro_display_regular"
-                android:hint="House Number"
-                />
+                android:hint="Remarks"/>
         </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/delivery_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sfpro_display_regular"
+                    android:hint="Delivery Time"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/delivery_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sfpro_display_regular"
+                    android:hint="Delivery Date"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    <!--    <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <EditText
@@ -129,8 +302,8 @@
                 android:fontFamily="@font/sfpro_display_regular"
                 android:hint="Landmark"
                 />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>-->
+<!--        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <EditText
@@ -145,8 +318,8 @@
                 android:fontFamily="@font/sfpro_display_regular"
                 android:hint="Area Name"
                 />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>-->
+   <!--     <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <EditText
@@ -159,8 +332,7 @@
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sfpro_display_regular"
-                android:hint="Distric Name"
-                />
+                android:hint="Distric Name"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -175,8 +347,7 @@
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sfpro_display_regular"
-                android:hint="Pincode"
-                />
+                android:hint="Pincode"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -191,9 +362,8 @@
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sfpro_display_regular"
-                android:hint="State Name"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:hint="State Name"/>
+        </com.google.android.material.textfield.TextInputLayout>-->
         <TextView
             android:id="@+id/add_order"
             android:layout_width="match_parent"
