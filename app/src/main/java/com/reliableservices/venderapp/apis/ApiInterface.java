@@ -46,5 +46,8 @@ public interface ApiInterface {
     Call<CityStatePinWrapper> getPlace(@Query("api_key") String api_key,
                                        @Query("tag") String tag);
 
-
+    @GET("item_comp_master.php")
+    Call<BusiRegsWrapper> addCompany(@Query("api_key") String api_key,
+                                   @Query("tag") String tag,
+                                   @Query("password") String password);
 }

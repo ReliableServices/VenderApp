@@ -92,6 +92,8 @@
             android:layout_height="wrap_content"
             android:padding="2dp">
             <TextView
+                android:id="@+id/delivered"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sfpro_display_semibold"
@@ -99,6 +101,28 @@
                 android:padding="7dp"
                 android:textColor="@color/gray"
                 android:text="Delivered"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfpro_display_semibold"
+                android:textSize="12sp"
+                android:padding="7dp"
+                android:textColor="@color/gray"
+                android:text="Accepted"/>
+
+            <TextView
+                android:id="@+id/shipped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfpro_display_semibold"
+                android:textSize="12sp"
+                android:padding="7dp"
+                android:textColor="@color/gray"
+                android:text="Shipped"/>
+
             <TextView
                 android:id="@+id/cust_detail"
                 android:layout_width="wrap_content"
@@ -114,6 +138,7 @@
                 android:layout_alignParentRight="true"
                 app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_right_24"
                 app:drawableRightCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
         </RelativeLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

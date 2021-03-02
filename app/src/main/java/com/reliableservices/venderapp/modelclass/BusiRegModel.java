@@ -7,6 +7,7 @@ import lombok.Setter;
 @Setter
 public class BusiRegModel {
     private String 	company_name;
+    private String 	company_id;
     private String mobile;
     private String person_name;
     private String email;

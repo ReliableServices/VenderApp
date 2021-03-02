@@ -45,11 +45,15 @@ public class PendingOrderAdapter extends RecyclerView.Adapter<PendingOrderAdapte
         return pendingOrderArray.size();
     }
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView item,cust_detail;
+        TextView item,cust_detail,shipped,accept,delivered;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             item = itemView.findViewById(R.id.item);
             cust_detail = itemView.findViewById(R.id.cust_detail);
+            shipped  = itemView.findViewById(R.id.shipped);
+            accept = itemView.findViewById(R.id.accept);
+            delivered = itemView.findViewById(R.id.delivered);
+
         }
     }
 }

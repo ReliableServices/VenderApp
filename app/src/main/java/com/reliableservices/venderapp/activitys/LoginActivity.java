@@ -16,6 +16,7 @@ import com.reliableservices.venderapp.apis.RetrofitCall;
 import com.reliableservices.venderapp.common.Common;
 import com.reliableservices.venderapp.common.GlobalMethods;
 import com.reliableservices.venderapp.common.ShareUtils;
+import com.reliableservices.venderapp.modelclass.BusiRegModel;
 import com.reliableservices.venderapp.modelclass.BusiRegsWrapper;
 import com.valdesekamdem.library.mdtoast.MDToast;
 
@@ -87,12 +88,12 @@ public class LoginActivity extends AppCompatActivity {
                                 if(busiRegsWrapper.getStatus().equals(Common.SUCCESS))
                                 {
                                     shareUtils.saveString(Common.IS_LOGIN,"TRUE");
-                                 /*   shareUtils.saveString(Common.USER_ID,busiRegsWrapper.getData().get(0).getUser_id());
-                                    shareUtils.saveString(Common.USER_NAME,loginDataWrapper.getData().get(0).getName());
-                                    shareUtils.saveString(Common.PRINT,loginDataWrapper.getData().get(0).getPrint());
-                                    shareUtils.saveString(Common.ADDRESS,loginDataWrapper.getData().get(0).getAddress());
-                                    shareUtils.saveString(Common.MOBILE,loginDataWrapper.getData().get(0).getMobile());
-                                    shareUtils.saveString(Common.CITY,loginDataWrapper.getData().get(0).getCity());
+                                    shareUtils.saveString(Common.USER_ID,busiRegsWrapper.getData().get(0).getCompany_id());
+                                    shareUtils.saveString(Common.USER_NAME,busiRegsWrapper.getData().get(0).getCompany_name());
+//                                    shareUtils.saveString(Common.PRINT,busiRegsWrapper.getData().get(0).getPrint());
+                                    shareUtils.saveString(Common.ADDRESS,busiRegsWrapper.getData().get(0).getAddress());
+                                    shareUtils.saveString(Common.MOBILE,busiRegsWrapper.getData().get(0).getMobile());
+                                  /*    shareUtils.saveString(Common.CITY,loginDataWrapper.getData().get(0).getCity());
                                     shareUtils.saveString(Common.STATE,loginDataWrapper.getData().get(0).getState());
                                     shareUtils.saveString(Common.PIN_CODE,loginDataWrapper.getData().get(0).getPin_code());
                                     shareUtils.saveString(Common.EMAIL,loginDataWrapper.getData().get(0).getEmail());

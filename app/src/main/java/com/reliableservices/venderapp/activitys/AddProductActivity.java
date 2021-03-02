@@ -13,21 +13,17 @@ import com.reliableservices.venderapp.R;
 public class AddProductActivity extends AppCompatActivity {
      private TextView continue_btn;
     private Toolbar toolbar_layout;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_product);
         start();
         process();
-
     }
-
     private void start() {
         toolbar_layout = findViewById(R.id.toolbar_layout);
         continue_btn  =findViewById(R.id.continue_btn);
     }
-
     private void process() {
         toolbar_layout.setTitle("Add Product");
         setSupportActionBar(toolbar_layout);
