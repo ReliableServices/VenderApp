@@ -47,7 +47,22 @@ public interface ApiInterface {
                                        @Query("tag") String tag);
 
     @GET("item_comp_master.php")
+    Call<BusiRegsWrapper> getCompany(@Query("api_key") String api_key,
+                                     @Query("company_id") String company_id);
+
+    @GET("item_comp_master.php")
     Call<BusiRegsWrapper> addCompany(@Query("api_key") String api_key,
                                    @Query("tag") String tag,
-                                   @Query("password") String password);
+                                   @Query("data") String data);
+
+    @GET("category_master.php")
+    Call<BusiRegsWrapper> getCategory(@Query("api_key") String api_key,
+                                     @Query("company_id") String company_id);
+
+    @GET("category_master.php")
+    Call<BusiRegsWrapper> addCategory(@Query("api_key") String api_key,
+                                     @Query("tag") String tag,
+                                     @Query("data") String data);
+
+
 }

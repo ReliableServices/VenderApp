@@ -1,10 +1,12 @@
 package com.reliableservices.venderapp.activitys;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -93,15 +95,18 @@ public class VenderRegistrationActivity extends AppCompatActivity {
 
     }
 
+
     private void setupState(final ArrayList<CityStateData> cityStateData)
     {
-        state_name.setOnClickListener(new View.OnClickListener() {
+        state_name.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
-            public void onClick(View view) {
-
-                spinnerDialog2.showSpinerDialog();
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus){
+                    spinnerDialog2.showSpinerDialog();
+                }
             }
         });
+
         ArrayList<String> model_name=new ArrayList<>();
         for(CityStateData rs: cityStateData)
         {

@@ -10,13 +10,14 @@ public interface Common {
     String API_KEY="Vender@2021";
     String SUCCESS="success";
     int RESPONSE_CODE=200;
-    String USER_ID="user_id";
-    String USER_NAME="user_name";
+    String USER_ID="co_id";
+    String COMPANY_NAME="company_name";
     String PRINT="print";
     String ADDRESS="address";
     String STATE="state";
     String CITY="city";
     String PIN_CODE="pin_code";
+    String COUNTRY="pin_code";
     String MOBILE="mobile";
     String EMAIL="email";
     String PHOTO="photo";

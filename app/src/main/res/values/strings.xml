@@ -37,7 +37,7 @@
     <string name="error_msg_no_internet">Not connected to internet</string>
     <string name="error_msg_timeout">The server took too long to respond</string>
     <string name="share_product">Share Product</string>
-    <string name="in_stock">In stock</string>
+    <string name="in_stock"> out of stock</string>
     <string name="add_new_product">Add new product</string>
     <string name="this_will_allow_customers_to_see_it_while_applying_the_n_coupan">This will allow customers to see it while applying the \n coupan.</string>
     <string name="online_payment">Online Payment</string>

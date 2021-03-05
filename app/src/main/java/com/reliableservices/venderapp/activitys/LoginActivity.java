@@ -55,7 +55,6 @@ public class LoginActivity extends AppCompatActivity {
         }else {
 
         }
-
         forgot_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,17 +87,16 @@ public class LoginActivity extends AppCompatActivity {
                                 if(busiRegsWrapper.getStatus().equals(Common.SUCCESS))
                                 {
                                     shareUtils.saveString(Common.IS_LOGIN,"TRUE");
-                                    shareUtils.saveString(Common.USER_ID,busiRegsWrapper.getData().get(0).getCompany_id());
-                                    shareUtils.saveString(Common.USER_NAME,busiRegsWrapper.getData().get(0).getCompany_name());
-//                                    shareUtils.saveString(Common.PRINT,busiRegsWrapper.getData().get(0).getPrint());
+                                    shareUtils.saveString(Common.USER_ID,busiRegsWrapper.getData().get(0).getCo_id());
+                                    shareUtils.saveString(Common.COMPANY_NAME,busiRegsWrapper.getData().get(0).getCompany_name());
                                     shareUtils.saveString(Common.ADDRESS,busiRegsWrapper.getData().get(0).getAddress());
                                     shareUtils.saveString(Common.MOBILE,busiRegsWrapper.getData().get(0).getMobile());
-                                  /*    shareUtils.saveString(Common.CITY,loginDataWrapper.getData().get(0).getCity());
-                                    shareUtils.saveString(Common.STATE,loginDataWrapper.getData().get(0).getState());
-                                    shareUtils.saveString(Common.PIN_CODE,loginDataWrapper.getData().get(0).getPin_code());
-                                    shareUtils.saveString(Common.EMAIL,loginDataWrapper.getData().get(0).getEmail());
-                                    shareUtils.saveString(Common.PHOTO,loginDataWrapper.getData().get(0).getPhoto());
-                                    shareUtils.saveString(Common.GEO_LOCATION,loginDataWrapper.getData().get(0).getGeo_location());*/
+                                    shareUtils.saveString(Common.EMAIL,busiRegsWrapper.getData().get(0).getEmail());
+                                    shareUtils.saveString(Common.CITY,busiRegsWrapper.getData().get(0).getCity());
+                                    shareUtils.saveString(Common.PIN_CODE,busiRegsWrapper.getData().get(0).getPin_code());
+                                    shareUtils.saveString(Common.CITY,busiRegsWrapper.getData().get(0).getDistrict());
+                                    shareUtils.saveString(Common.COUNTRY,busiRegsWrapper.getData().get(0).getCountry());
+                                    shareUtils.saveString(Common.STATE,busiRegsWrapper.getData().get(0).getState());
                                     Intent i = new Intent(LoginActivity.this, MainActivity.class);
                                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                     startActivity(i);

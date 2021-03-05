@@ -24,7 +24,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VenderApp"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activitys.AddCustNameActivity"></activity>
+        <activity android:name=".activitys.ProductListActivity"></activity>
+        <activity android:name=".activitys.AddCustNameActivity" />
         <activity android:name=".activitys.PurchaseOrderListActivity" />
         <activity android:name=".activitys.PurchaseStockActivity" />
         <activity android:name=".activitys.CreateCategoryActivity" />

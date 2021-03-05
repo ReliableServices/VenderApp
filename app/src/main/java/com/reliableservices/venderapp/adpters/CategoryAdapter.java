@@ -22,14 +22,15 @@ import com.reliableservices.venderapp.fragments.ManageFragment;
 import com.reliableservices.venderapp.fragments.OrderFragment;
 import com.reliableservices.venderapp.fragments.ProductFragment;
 import com.reliableservices.venderapp.fragments.ProductListFragment;
+import com.reliableservices.venderapp.modelclass.BusiRegModel;
 
 import java.util.ArrayList;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
-    ArrayList<String> categoryArrayList;
+    ArrayList<BusiRegModel> categoryArrayList;
     Context context;
 
-    public CategoryAdapter(ArrayList<String> categoryArrayList, Context context) {
+    public CategoryAdapter(ArrayList<BusiRegModel> categoryArrayList, Context context) {
         this.categoryArrayList = categoryArrayList;
         this.context = context;
     }
@@ -43,8 +44,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final String m = categoryArrayList.get(position);
-        holder.item.setText(m);
+        final BusiRegModel m = categoryArrayList.get(position);
+        holder.item.setText(m.getCategory_name());
         holder.cat_item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
